@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Fill-in-the-blank AI prompts and Claude skills for Gareth Winter's Facebook Ads Live Build.">
+<title>Facebook Ads Live Build Prompts</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; sticky brand bar fills every prompt; prompts grouped by the deck's four parts, in slide order. */
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#16131c; --muted:#5e5869; --line:#e6e1ec;
+  --accent:#7a12d4; --accent-soft:#f1e7fb; --blank:#fff1d6; --blank-ink:#7a4a00; --fill:#e9f6ec; --fill-ink:#1d6b34;
+  --display:'Schibsted Grotesk', 'DM Sans', system-ui, sans-serif;
+  --body:'DM Sans', system-ui, -apple-system, sans-serif;
+  --mono:'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121016; --surface:#1b1821; --ink:#f1edf6; --muted:#a59fb0; --line:#2e2a36;
+  --accent:#c08cff; --accent-soft:#2a1d3b; --blank:#3a2c12; --blank-ink:#ffd58a; --fill:#16301f; --fill-ink:#8fe0a8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121016; --surface:#1b1821; --ink:#f1edf6; --muted:#a59fb0; --line:#2e2a36;
+  --accent:#c08cff; --accent-soft:#2a1d3b; --blank:#3a2c12; --blank-ink:#ffd58a; --fill:#16301f; --fill-ink:#8fe0a8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:820px;margin:0 auto;padding-inline:20px;padding-block:28px 80px}
+header.intro{display:flex;flex-direction:column;gap:10px;padding-block:8px 20px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,6vw,52px);line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:6px 0 0;padding:0;list-style:none;counter-reset:s}
+.how li{counter-increment:s;font-size:14px;color:var(--muted);border-top:2px solid var(--ink);padding-top:8px}
+.how li::before{content:counter(s);display:block;font-family:var(--display);font-weight:800;font-size:20px;color:var(--ink)}
+@media (max-width:560px){.how{grid-template-columns:1fr}}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px;display:flex;flex-direction:column;gap:10px}
+.fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+@media (max-width:640px){.fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.fields label{display:flex;flex-direction:column;gap:3px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:0}
+.fields input{font:inherit;font-size:15px;text-transform:none;letter-spacing:0;font-weight:500;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0;width:100%}
+.fields input:focus{outline:2px solid var(--accent);outline-offset:1px}
+nav.parts{display:flex;gap:6px;flex-wrap:wrap}
+nav.parts a{font-size:13px;font-weight:700;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px}
+nav.parts a:hover,nav.parts a:focus-visible{border-color:var(--accent);color:var(--accent)}
+.progress{font-size:13px;color:var(--muted);margin-left:auto;align-self:center;font-variant-numeric:tabular-nums}
+
+section.part{display:flex;flex-direction:column;gap:14px;padding-top:34px;scroll-margin-top:170px}
+section.part > h2{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.01em;margin:0;display:flex;align-items:baseline;gap:12px}
+section.part > h2 span{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+section.part > p{margin:0;color:var(--muted)}
+
+article.p{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+article.p.done{opacity:.62}
+.ph{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.ph h3{margin:0;font-size:18px;line-height:1.25;font-weight:700}
+.after{font-size:12px;color:var(--muted);margin:2px 0 0}
+.after b{color:var(--ink);font-weight:500}
+.why{margin:0;font-size:14px;color:var(--muted)}
+.prompt{font-family:var(--mono);font-size:14px;line-height:1.6;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.v{background:var(--fill);color:var(--fill-ink);border-radius:4px;padding:0 3px}
+.v.empty,.b{background:var(--blank);color:var(--blank-ink);border-radius:4px;padding:0 3px}
+.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button{font:inherit;font-size:14px;font-weight:700;border-radius:8px;padding:7px 14px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:var(--surface)}
+button.ghost{background:transparent;color:var(--ink);border-color:var(--line);font-weight:500}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.credit{font-size:12px;color:var(--muted);margin-left:auto}
+.toast{font-size:13px;color:var(--fill-ink);font-weight:700}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+.skills{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:18px}
+.skills h2{font-family:var(--display);font-weight:800;font-size:22px;margin:0}
+.skills p{margin:0;color:var(--muted);font-size:15px}
+.skills ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (max-width:560px){.skills ul{grid-template-columns:1fr}}
+.skills li{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-width:0}
+.skills a{font-weight:700;color:var(--accent);text-decoration:none}
+.skills a:hover,.skills a:focus-visible{text-decoration:underline}
+.skills span{font-size:13px;color:var(--muted)}
+</style>
+
+
+</head>
+<body>
+<div class="wrap">
+  <header class="intro">
+    <span class="eyebrow">Facebook Ads Live Build · Gareth Winter</span>
+    <h1>Build your Facebook ads as we go.</h1>
+    <p class="lede">Every prompt here matches a slide in today's session. On Claude? Install the four skills instead (see below) and just say “start my brand kit”. Fill in your brand once and every prompt updates. Highlighted yellow blanks are yours to fill before you paste.</p>
+    <ol class="how">
+      <li>Type your brand, what you sell, who it's for and your price in the bar below.</li>
+      <li>Open one AI chat (Claude or ChatGPT) and paste <b>Start here</b>. Keep that chat for the whole session.</li>
+      <li>After each section, copy the next prompt, fill the yellow blanks and paste it into the same chat.</li>
+    </ol>
+  </header>
+
+  <section class="skills" id="skills">
+    <h2>On Claude? Install the four skills</h2>
+    <p>The skills run the same build as a guided interview, and each picks up where the last one stopped. Download all four, then in Claude open <b>Settings</b>, go to <b>Capabilities</b>, and upload each zip under <b>Skills</b> (paid Claude plans). Then type “start my brand kit”.</p>
+    <ul>
+      <li><a href="skills/facebook-ads-brand-kit.zip">1 · Brand Kit</a><span>Purpose, values, position, voice, proof, offer</span></li>
+      <li><a href="skills/facebook-ads-insight.zip">2 · Insight</a><span>Tensions, human needs, the 10 beliefs</span></li>
+      <li><a href="skills/facebook-ads-static.zip">3 · Facebook Static Ads</a><span>Hooks, feed ads, carousels, lead forms, test plan, results</span></li>
+      <li><a href="skills/facebook-ads-video.zip">4 · Facebook Video Ads</a><span>Reels scripts, AI shot prompts, hook tests</span></li>
+    </ul>
+  </section>
+
+  <div class="bar">
+    <div class="fields">
+      <label for="f-brand">Your brand<input id="f-brand" data-k="BRAND" placeholder="e.g. Snooze Club" autocomplete="off"></label>
+      <label for="f-product">What you sell<input id="f-product" data-k="PRODUCT" placeholder="e.g. weighted sleep masks" autocomplete="off"></label>
+      <label for="f-customer">Who it's for<input id="f-customer" data-k="CUSTOMER" placeholder="e.g. new parents" autocomplete="off"></label>
+      <label for="f-price">Price<input id="f-price" data-k="PRICE" placeholder="e.g. £39" autocomplete="off"></label>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <nav class="parts" aria-label="Jump to part">
+        <a href="#start">Start</a><a href="#brand">01 Brand kit</a><a href="#insight">02 Insight</a><a href="#static">03 Static</a><a href="#video">04 Video</a>
+      </nav>
+      <span class="progress" id="progress"></span>
+    </div>
+  </div>
+
+  <main id="list"></main>
+
+  <footer>
+    Frameworks credited where used: Eugene Schwartz (market sophistication), Drew Eric Whitman (Life-Force 8), Alex Hormozi (value equation), Sabrina Stocker (transformation statement), Daniel Priestley (Social Pitch, 10 beliefs), Dave Asprey (five brand laws), Ajit Nawalkha (Pain, Urgent, Pay; carousels first), Hook Point (Run the Tap, gold and bronze), Vishen Lakhiani (HSTSS), Domenic Ashburn (skill × enjoyment). Your answers stay in your own AI chat; this page only remembers what you typed in the bar, on this device.
+  </footer>
+</div>
+
+<script>
+const PARTS=[
+ {id:'start',n:'00',name:'Start here',intro:'Paste this first. It turns your chat into a strategist that keeps one running Brand Kit for the whole session.'},
+ {id:'brand',n:'01',name:'Brand kit',intro:'No brand, no ads. Build the kit before writing a single headline.'},
+ {id:'insight',n:'02',name:'Insight',intro:'Data says the tomato is a fruit. Insight says don’t put it in a fruit salad.'},
+ {id:'static',n:'03',name:'Static ads',intro:'Find the angle on a single frame. Test one variable at a time.'},
+ {id:'video',n:'04',name:'Video + AI',intro:'Back the winning horse. Only now do we make the video.'}
+];
+const P=[
+ ['start','Start here: your brand strategist','Before the session starts','Sets up one running Brand Kit so every later prompt builds on the last.',
+ `You are my brand and Facebook advertising strategist for the next 90 minutes. My brand is {BRAND}. We sell {PRODUCT} to {CUSTOMER} at {PRICE}. We will advertise on Facebook and Instagram.
+
+Keep a running document called MY BRAND KIT with these sections: Purpose, Values, Position, Audience, Tone of voice, Visual identity, Proof, Offer, Insights, Angles, Winning ad.
+
+After every task I give you, update the kit and show me only the section you changed. Use British spelling. If you need more from me, ask one question at a time. Be blunt: tell me when an answer is vague or could belong to any brand.`,''],
+
+ ['brand','Purpose: why you exist','After: Eight questions before you write a single ad','Purpose is the reason anyone should care that you exist, beyond making money.',
+ `Help me find the purpose of {BRAND}. Interview me one question at a time:
+1. Why did I really start this?
+2. What changes in the world because we exist?
+3. What would customers lose if we vanished tomorrow?
+4. What makes me angry about my industry?
+
+After my answers, write 3 purpose statements under 15 words each. Ban the words "empower", "transform" and "journey". Tell me which is strongest and why, then add it to MY BRAND KIT.`,''],
+ ['brand','Values: what you’d pay to protect','After: Brand question board','A value only counts if it has cost you something.',
+ `I think {BRAND}'s values are: [VALUE 1], [VALUE 2], [VALUE 3].
+
+Test each one:
+- Have we ever lost money or a customer to protect it?
+- Would a competitor say exactly the same thing?
+- Can a customer see it in what we do, not just what we say?
+
+Keep the values that pass. Rewrite the rest as behaviours in the form "We [do X] even when [it costs Y]". Add the final three to MY BRAND KIT.`,''],
+ ['brand','Position: the space only you own','After: Fill in the blanks. Then try to steal it.','A position a competitor could copy is not a position.',
+ `Fill in this positioning statement for {BRAND} three different ways:
+"For [WHO] who [STRUGGLE], {BRAND} is the [CATEGORY] that [BENEFIT], unlike [THE ALTERNATIVE], because [PROOF]."
+
+Run two tests on each version:
+- The steal test: could a competitor put their logo on it?
+- The enemy test: what does it stand against?
+
+Pick the winner, explain why in two lines, and add it to MY BRAND KIT.`,''],
+ ['brand','Market sophistication: how tired is your market?','After: How tired is your market of hearing it?','Decides whether your ads lead with a claim, a mechanism or an identity.',
+ `Here are 5 competitor Facebook ads from the Meta Ad Library (facebook.com/ads/library):
+[PASTE 5 ADS OR SCREENSHOTS, AND HOW LONG EACH HAS BEEN RUNNING]
+
+Using Eugene Schwartz's five stages of market sophistication:
+1. What stage is my market at, and what is every competitor claiming?
+2. Which of these ads have run the longest (usually the profitable ones), and what do they have in common?
+3. Should {BRAND} lead with a claim, a mechanism or an identity?
+4. Write one Facebook ad headline for {BRAND} in that style.`,'Eugene Schwartz'],
+ ['brand','Audience: one person, described like a friend','After: Eight questions (Audience)','Ads speak to one person. Make them specific enough to picture.',
+ `Describe the one person {BRAND} is for, the way a friend would: a first name, their age, a normal Tuesday, what they've already tried, and the exact words they use when they complain about the problem.
+
+Then check them against Pain, Urgent, Pay: do they hurt, do they need it fixed now, and can they pay {PRICE}? Tell me which of the three is weakest and how that changes our ads. Add the person to MY BRAND KIT.`,'Ajit Nawalkha'],
+ ['brand','Tone of voice: set the four dials','After: Four dials. Set them on purpose.','How you sound, and how you never sound.',
+ `Place {BRAND} on four tone dials, each from 1 to 5:
+funny to serious, casual to formal, irreverent to respectful, enthusiastic to matter-of-fact.
+My gut scores are: [YOUR 4 SCORES].
+
+Then:
+1. Write "We are X, never Y" for three traits.
+2. Rewrite this line from my website in our voice: "[A LINE FROM YOUR SITE]".
+Add the voice rules to MY BRAND KIT.`,'Nielsen Norman Group tone dimensions'],
+ ['brand','Visual identity: how you look','After: Eight questions (Visual identity)','So every AI image you make looks like the same brand.',
+ `Using MY BRAND KIT so far, propose a visual identity for {BRAND}:
+- 2 main colours and 1 accent, with hex codes
+- a headline font and a body font from Google Fonts
+- a photography style in one sentence
+- 3 things our visuals must never do
+Explain each choice in one line, then add it to MY BRAND KIT.`,''],
+ ['brand','Proof and offer: why believe you, why buy now','After: Eight questions (Proof, Offer)','Proof earns belief. The offer earns the click.',
+ `Here is the proof I have for {BRAND}: [REVIEWS, NUMBERS, RESULTS, PRESS, CREDENTIALS].
+Here is my offer: [WHAT THEY GET, PRICE, ANY BONUS OR DEADLINE].
+
+1. Sort my proof from strongest to weakest and tell me what proof my customer would most want that I'm missing.
+2. Score my offer on the value equation: dream outcome, likelihood of success, time delay, effort.
+3. Give me 3 ways to add value without cutting the price, and one honest reason to act now.
+Add both to MY BRAND KIT.`,'Alex Hormozi (value equation)'],
+ ['brand','Transformation statement and Social Pitch','After: Today we point them at ads','The two lines your whole campaign hangs from.',
+ `1. Write my transformation statement in the form "From [how they feel now] to [how they want to feel]", using words my customer would say out loud. Give me 3 options.
+2. Write my Social Pitch for {BRAND}: Name, Same, Fame, Pain, Aim, Game. Keep it under 40 seconds spoken, and make "Same" a category anyone instantly understands.
+3. Audit {BRAND} against the five brand laws: identity, instant comprehension, positive emotion, polarity, community. Pass or fail each with one fix.`,'Sabrina Stocker · Daniel Priestley · Dave Asprey'],
+
+ ['insight','From data to insight','After: Same fact. Very different ad.','Turns raw customer words into the tensions your ads can play with.',
+ `Here are [NUMBER] customer reviews, comments under Facebook ads (ours or competitors'), DMs or survey answers about {BRAND} or our category:
+[PASTE THEM]
+
+Find the 5 recurring tensions. Write each as:
+"I want ___, but ___, because ___."
+Use their exact words where you can. Under each, add: "So our ad should ___."
+Add them to MY BRAND KIT under Insights.`,''],
+ ['insight','Human needs: which ones do you serve?','After: Insight = a human need + the tension in the way','Insights land hardest when they sit on a hard-wired need.',
+ `Using Drew Eric Whitman's Life-Force 8 (survival, food and drink, freedom from fear and pain, sexual companionship, comfortable living, being superior, protecting loved ones, social approval):
+1. Which two does {BRAND} really serve?
+2. For each, what tension stops {CUSTOMER} from getting it?
+3. Pair one learned want (e.g. convenience, quality, bargains) with one Life-Force 8 need to make our message stronger.`,'Drew Eric Whitman, Cashvertising'],
+ ['insight','No data yet? Ask five customers','After: Where insights hide / Insight question board','The fastest insight source is a short, well-asked question.',
+ `I don't have much customer data yet. First, tell me where to find free insight on Facebook: comments under competitor ads, Facebook groups for {CUSTOMER}, and the Meta Ad Library. Then write a 5-question interview I can send to 5 customers of {BRAND} this week. Include:
+- What nearly stopped you buying?
+- What did you try before us?
+- How would you describe us to a friend?
+Keep each question under 15 words, open-ended and non-leading. Then tell me what to listen for in the answers.`,''],
+ ['insight','The 10 beliefs','After: What are the 10 beliefs someone would have to have…','Every belief they don’t hold yet is an ad angle.',
+ `What are the 10 beliefs someone would have to have in order to enthusiastically buy {PRODUCT} from {BRAND}?
+
+For each belief, tell me whether {CUSTOMER} probably already holds it. For every belief they don't hold yet, write one headline under 8 words that installs it.`,'Daniel Priestley'],
+ ['insight','Pick your three insights','After: One sentence with tension in it','You only need three. Pick the ones that are true, surprising and yours.',
+ `From the insights in MY BRAND KIT, choose the 3 strongest. Rank them on: is it true, is it surprising, and could only {BRAND} say it?
+Write each in the form "I want ___, but ___, because ___. So our ad should ___."`,''],
+
+ ['static','Set up Facebook to find your people','After: On Facebook, the creative is the targeting.','The objective and the variety of your ads do most of the targeting now.',
+ `I'm about to launch Facebook ads for {BRAND}. My goal is [SALES OR LEADS] and my daily budget is [BUDGET].
+1. Which campaign objective should I pick, and why?
+2. Should I go broad or use interest targeting, given my budget?
+3. How many genuinely different ads should I launch in the first ad set, and what should make them different?
+4. Give me a 5-point setup checklist: Meta Pixel, Conversions API, the conversion event, Advantage+ placements, and what to switch off while testing.`,''],
+ ['static','Twenty hooks before you judge one','After: Same product. Nine reasons to care.','Quantity first. Ranking second.',
+ `Take my top insight: [PASTE INSIGHT].
+Write 20 Facebook ad headlines for {BRAND} across these angles: pain, dream outcome, social proof, contrarian, humour, us vs them, founder, objection killer, the offer. Each under 8 words.
+Don't filter while writing. Then rank the top 5 and explain why each could win. Flag any that Facebook would reject under its personal attributes rule (anything that says or implies the viewer's health, finances, age, appearance or other personal traits) and rewrite them. Add the top 3 to MY BRAND KIT under Angles.`,'Hook Point (Run the Tap)'],
+ ['static','One angle, three narratives','After: Angle is what you say. Narrative is how you tell it.','The same reason to care, told three different ways.',
+ `Take this angle for {BRAND}: [ANGLE].
+Write a short Facebook ad (under 60 words of primary text) for it in three narratives:
+1. Problem, Agitate, Solve
+2. Before, After, Bridge
+3. Pope in the Pool (deliver the useful information inside something entertaining)
+Tell me which suits our tone of voice best. If the Problem-Agitate-Solve version points at the viewer ("You're exhausted"), rewrite it to agitate the situation instead, so Facebook approves it.`,''],
+ ['static','A feed ad','After: Anatomy of a Facebook ad','Headline, visual, proof, CTA. Nothing else.',
+ `Write a Facebook feed ad for {BRAND} using angle [ANGLE]:
+- Primary text (the hook goes in the first 125 characters, before "See more")
+- Text on the image (under 8 words, big enough to read on a phone)
+- Visual brief for a 4:5 image
+- Headline under the image (under 40 characters)
+- Description (optional, under 30 characters)
+- CTA button from Facebook's list (Shop now, Learn more, Sign up, Get offer)
+Check it against Facebook's personal attributes rule.
+Then write an image prompt for an AI image model that matches the visual identity in MY BRAND KIT.`,''],
+ ['static','A carousel that earns the swipe','After: Card one is the ad. Every other card earns the swipe.','Card one is the ad. The last card repeats the hook.',
+ `Turn angle [ANGLE] into a 6-card Facebook and Instagram carousel ad for {BRAND}:
+Card 1: the hook (must work on its own). Card 2: the problem. Card 3: the turn. Card 4: proof. Card 5: the CTA and offer. Card 6: repeat the hook.
+Shape it as a story using HSTSS: hook, stakes, turn, scene, shatter. Maximum 15 words per card. Facebook gives each card its own headline under the image: write one per card (under 40 characters). Add the primary text above the carousel and a visual note for each card.`,'Vishen Lakhiani (HSTSS)'],
+ ['static','Email: subject lines and body','After: Email · after the Facebook lead ad','The subject line is the ad. The body earns one click.',
+ `Someone just filled in our Facebook lead ad. Write the follow-up email for {BRAND} on angle [ANGLE], to send within minutes:
+1. Five subject lines: curiosity, benefit, question, number, personal. Under 45 characters each, with preview text for each.
+2. A headline for a 600px email banner.
+3. A short body: one idea, short lines, one button.
+4. A P.S. that restates the offer.`,''],
+ ['static','Lead ad form','After: One angle, every Facebook placement','Capture the email without them leaving Facebook.',
+ `Write a Facebook lead ad form for {BRAND}:
+1. Intro: a headline and 2 lines that repeat the promise of the ad.
+2. Two to four questions, no more (every extra question costs leads). Prefer Facebook's pre-filled fields (name, email).
+3. A one-line privacy note.
+4. The thank-you screen: what happens next and one button.
+Then tell me which question I could cut.`,''],
+ ['static','Test plan: back the winning horse','After: One variable per race.','Change one thing per round, so you know exactly what won.',
+ `Here are my 3 angles for {BRAND}: [ANGLE 1], [ANGLE 2], [ANGLE 3]. My daily ad budget is [BUDGET].
+Build a Facebook Ads Manager test plan with one variable per round:
+Round 1: angle (same visual). Round 2: visual (winning angle). Round 3: format (feed, carousel, story).
+For each round give me the audience (keep it broad and identical), budget split, how long to run it, the metric that decides the winner, and the rule for switching off losers. Facebook needs roughly 50 results per ad set per week to leave the learning phase: if my budget can't reach that, tell me which earlier metric to judge on. Remind me not to edit ads mid-test and to switch off Advantage+ creative enhancements.`,''],
+ ['static','Read the results','After: Reading the results in Ads Manager / The mirror test','Don’t ask what won. Ask why.',
+ `Here are my Facebook Ads Manager results: [PASTE: AD NAME, SPEND, IMPRESSIONS, CPM, 3-SECOND PLAYS, LINK CTR, COST PER LINK CLICK, RESULTS, COST PER RESULT, ROAS, FREQUENCY].
+Work out hook rate (3-second plays divided by impressions) for any video.
+1. Sort the ads into gold, silver and bronze by cost per result.
+2. Write what gold does that bronze doesn't, as: "Gold does [tactic], which makes the viewer feel [effect]."
+3. For each loser, tell me where it breaks: stop (hook rate, CPM), click (link CTR) or convert (cost per result). Flag any ad with frequency above 3 and falling results as fatigued.
+Add the winning ad to MY BRAND KIT.`,'Adapted from Hook Point'],
+
+ ['video','Static to a 30-second video','After: The static is the storyboard / A Facebook video ad','The winning static becomes the brief. No new ideas.',
+ `This static won our test: [HEADLINE, VISUAL, PROOF LINE, CTA].
+Write a 15-second Facebook Reels ad (9:16) for {BRAND}:
+0–3s hook using the exact winning headline, 3–6s problem, 6–11s turn or demo, 11–13s proof, 13–15s CTA.
+Include on-screen captions (most people watch with the sound off), a shot list, a 4:5 crop note for the feed version, the primary text to post with it, and a 30-second version for retargeting.`,''],
+ ['video','Make it funny','After: The joke carries the angle. It never replaces it.','If you remove the joke, the reason to buy should go with it.',
+ `Rewrite that script in two comedy formats from this list: exaggeration, deadpan, fake infomercial, POV, the twist, the enemy.
+The joke must carry the reason to buy {PRODUCT}. Keep the winning headline as the hook. Stay inside our tone of voice from MY BRAND KIT.`,''],
+ ['video','Shot prompts for an AI video model','After: From brand kit to video in one loop','Turns the script into prompts you can generate.',
+ `Turn each shot in the script into a prompt for an AI video model. For each: subject, action, camera move, lighting, style, 5 seconds, 9:16.
+Keep the same characters, setting and colours from shot to shot, and match the visual identity in MY BRAND KIT.`,''],
+ ['video','Five hooks, same video','After: Turn our winner into a video','Test the hook only. Everything else stays locked.',
+ `Write 5 new opening hooks (the first 3 seconds, which Facebook measures as hook rate) for the same video: a question, a bold claim, a visual surprise, a problem, and a curiosity gap.
+Keep the rest of the script identical so I can test the hook as the only variable.`,''],
+ ['video','What to hand to AI','After: From brand kit to video in one loop','Keep the taste. Hand over the rest.',
+ `My Facebook ad workflow steps are: brief, insights, angles, copy, visuals, video, captions, launching in Ads Manager, reporting.
+Ask me, for each step, whether I'm good at it and whether I enjoy it. Then sort the steps into four boxes: do it myself, learn it with AI, collaborate with AI, automate it. Tell me the first thing to automate this week.`,'Domenic Ashburn (skill × enjoyment)'],
+ ['video','Save your Brand Kit','At the end of the session','Paste this at the top of any future AI chat.',
+ `Turn MY BRAND KIT into one document I can paste at the top of any future AI chat. Under 400 words, with headings for each section, our tone-of-voice rules, our three insights and our winning ad. Write it so another AI could write on-brand ads for {BRAND} from it alone.`,'']
+];
+
+const KEYS=['BRAND','PRODUCT','CUSTOMER','PRICE'];
+const LABEL={BRAND:'YOUR BRAND',PRODUCT:'WHAT YOU SELL',CUSTOMER:'WHO IT’S FOR',PRICE:'YOUR PRICE'};
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const vals={}; KEYS.forEach(k=>vals[k]=store.get('lbp-'+k)||'');
+let done={}; try{done=JSON.parse(store.get('lbp-done')||'{}')}catch(e){done={}}
+
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function render(t){
+  return esc(t).replace(/\[([A-Z0-9 ,:\-\.’']{3,})\]/g,'<span class="b">[$1]</span>')
+               .replace(/\{(BRAND|PRODUCT|CUSTOMER|PRICE)\}/g,(m,k)=>vals[k]?`<span class="v">${esc(vals[k])}</span>`:`<span class="v empty">[${LABEL[k]}]</span>`);
+}
+function plain(t){return t.replace(/\{(BRAND|PRODUCT|CUSTOMER|PRICE)\}/g,(m,k)=>vals[k]||`[${LABEL[k]}]`)}
+
+const list=document.getElementById('list');
+function build(){
+  list.innerHTML='';
+  PARTS.forEach(part=>{
+    const s=document.createElement('section'); s.className='part'; s.id=part.id;
+    s.innerHTML=`<h2><span>${part.n}</span>${part.name}</h2><p>${part.intro}</p>`;
+    P.forEach((p,i)=>{ if(p[0]!==part.id) return;
+      const a=document.createElement('article'); a.className='p'+(done[i]?' done':''); a.dataset.i=i;
+      a.innerHTML=`<div class="ph"><div><h3>${p[1]}</h3><p class="after">${p[2].startsWith('After')?'<b>'+esc(p[2])+'</b>':esc(p[2])}</p></div></div>
+        <p class="why">${esc(p[3])}</p>
+        <pre class="prompt">${render(p[4])}</pre>
+        <div class="actions"><button type="button" data-copy="${i}">Copy prompt</button><button type="button" class="ghost" data-done="${i}">${done[i]?'Done ✓':'Mark done'}</button><span class="toast" aria-live="polite"></span>${p[5]?`<span class="credit">${esc(p[5])}</span>`:''}</div>`;
+      s.appendChild(a);
+    });
+    list.appendChild(s);
+  });
+  prog();
+}
+function refreshText(){document.querySelectorAll('article.p').forEach(a=>{a.querySelector('.prompt').innerHTML=render(P[a.dataset.i][4])})}
+function prog(){const n=Object.values(done).filter(Boolean).length;document.getElementById('progress').textContent=`${n} of ${P.length} done`}
+
+document.querySelectorAll('.fields input').forEach(inp=>{
+  inp.value=vals[inp.dataset.k];
+  inp.addEventListener('input',()=>{vals[inp.dataset.k]=inp.value.trim();store.set('lbp-'+inp.dataset.k,vals[inp.dataset.k]);refreshText()});
+});
+list.addEventListener('click',e=>{
+  const c=e.target.closest('[data-copy]'), d=e.target.closest('[data-done]');
+  if(c){const i=+c.dataset.copy, art=c.closest('article'), t=art.querySelector('.toast'), txt=plain(P[i][4]);
+    const ok=()=>{t.textContent='Copied';setTimeout(()=>t.textContent='',1800)};
+    const fallback=()=>{const r=document.createRange();r.selectNodeContents(art.querySelector('.prompt'));const s=getSelection();s.removeAllRanges();s.addRange(r);t.textContent='Selected: press copy'};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok,fallback)}else fallback();
+  }
+  if(d){const i=+d.dataset.done; done[i]=!done[i]; store.set('lbp-done',JSON.stringify(done));
+    d.textContent=done[i]?'Done ✓':'Mark done'; d.closest('article').classList.toggle('done',!!done[i]); prog();}
+});
+build();
+</script>
+
+</body>
+</html>
