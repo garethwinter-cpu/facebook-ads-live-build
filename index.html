@@ -1,49 +1,24 @@
 <!doctype html>
-<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facebook Ads Live Build · Gareth Winter</title>
-<meta name="description" content="A 43-slide workshop on building Facebook ads with Claude: brand kit, insight, static ads, testing and video. Ask Claude to apply each slide to your business.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{background:#05070a;color:#fff;font-family:'Google Sans','DM Sans',Arial,sans-serif;height:100%}
-#deck>section{position:relative;width:1920px;height:1080px;overflow:hidden;flex-shrink:0;transform-origin:0 0;list-style-position:inside}
-#deck>section aside{display:none}
-#deck>section img{display:block}
-a{color:inherit}
-/* presenter view */
-body.present{overflow:hidden}
-body.present #deck>section{position:absolute;left:0;top:0;opacity:0;pointer-events:none;transition:opacity .35s}
-body.present #deck>section.on{opacity:1;pointer-events:auto}
-#bar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 16px;background:rgba(5,7,10,.85);font-size:14px;z-index:9;opacity:0;transition:opacity .3s}
-body:hover #bar,#bar:focus-within{opacity:1}
-#bar button,#bar a{background:#181d26;color:#fff;border:1px solid #41464f;border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer;text-decoration:none}
-#notes{position:fixed;left:16px;right:16px;bottom:56px;max-height:30vh;overflow:auto;background:#181d26;border:1px solid #41464f;border-radius:12px;padding:16px;font-size:16px;line-height:1.5;display:none;z-index:9}
-body.shownotes #notes{display:block}
-/* overview */
-body.all #deck{display:flex;flex-direction:column;align-items:center;gap:24px;padding:24px 16px 80px}
-body.all .wrap{position:relative;overflow:hidden;border-radius:8px}
-body.all .wrap aside-copy{display:block}
-.n{font-size:14px;color:#b3b8c1;padding:6px 2px 0;max-width:100%}
-#intro{max-width:900px;margin:0 auto;padding:40px 16px 8px;font-size:17px;line-height:1.55;color:#dfe1e5}
-#intro h1{font-size:32px;color:#fff;margin-bottom:12px}
-#intro p{margin-bottom:12px}
-#intro code{display:block;background:#181d26;border:1px solid #41464f;border-radius:10px;padding:14px;white-space:pre-wrap;font-family:inherit;color:#fff}
-body.present #intro{display:none}
-</style></head>
-<body class="all">
-<div id="intro">
-<h1>Facebook Ads Live Build</h1>
-<p>A 43-slide workshop by Gareth Winter on building Facebook ads with Claude: brand kit, insight, static ads, test and learn, then video. Press <b>Present</b> to run the slides full screen (arrow keys to move, N for speaker notes).</p>
-<p><b>Use it with Claude.</b> Paste this link into Claude with this prompt:</p>
-<code>Read this deck: [paste this page's link, or the deck.md link below]. Then take me through it slide by slide and apply each slide to my business: [what you sell, who buys it, your website]. Ask me one question at a time when you need information only I have. At the end, give me my brand kit, three insights, nine Facebook ad drafts (three angles x three variations) and a 15-second Reels script for the strongest one.</code>
-<p>Plain-text version for AI: <a href="deck.md">deck.md</a> · Claude skills for the full guided build: <a href="https://github.com/garethwinter-cpu/facebook-ads-live-build/tree/main/skills">skills folder</a></p>
-</div>
-<main id="deck">
-<section id="cover" data-transition="fade" style="background:#0f131a">
+    <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Facebook Ads Live Build · Gareth Winter</title>
+    <meta name="description" content="A 43-slide workshop on building Facebook ads with Claude: brand kit, insight, static ads, testing and video.">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:'Google Sans','DM Sans',Arial,sans-serif;-webkit-tap-highlight-color:transparent;user-select:none}
+    #deck{position:fixed;inset:0}
+    #deck>section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;visibility:hidden;color:#fff}
+    #deck>section.on{visibility:visible}
+    #deck>section aside{display:none}
+    #deck>section img{display:block}
+    </style></head>
+    <body>
+    <main id="deck">
+    <section id="cover" data-transition="fade" style="background:#0f131a">
   <img src="assets/23f1866a9caa5f7e7dada476aa03fe55.jpg" alt="Gareth Winter on stage at Mindvalley University" style="position:absolute; top:0; left:0; width:1920px; height:1080px">
   <div style="position:absolute; top:0; left:0; width:1920px; height:1080px; display:flex; flex-direction:column; background:linear-gradient(90deg, #0f131af5 0%, #2a0650db 42%, #2a065026 70%, #0f131a00 100%)">
   </div>
-  <p style="position:absolute; top:150px; left:128px; width:900px; font-family:'Google Sans', Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#b06cf7">Mastermind · Session 2 · FACEBOK ADS Live Build</p>
+  <p style="position:absolute; top:150px; left:128px; width:900px; font-family:'Google Sans', Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#b06cf7">Mastermind · Session 2 · FACEBOOK ADS Live Build</p>
   <h1 style="position:absolute; top:220px; left:128px; width:1080px; font-family:'Google Sans', Arial, sans-serif; font-size:104px; font-weight:700; line-height:1.02; letter-spacing:-3px; color:#ffffff">Build ads&nbsp;<br>people stop for.</h1>
   <h2 style="position:absolute; top:530px; left:128px; width:960px; font-family:'Google Sans', Arial, sans-serif; font-size:48px; font-weight:500; line-height:1.15; color:#e9d8ff">Brand kit. Insight. Static. Then video.</h2>
   <p style="position:absolute; top:720px; left:128px; width:900px; font-family:'Google Sans', Arial, sans-serif; font-size:32px; line-height:1.4; color:#ffffff"><b>Gareth Winter</b><br><span style="color:#dfe1e5">Head of Content &amp; Creative Director</span></p>
@@ -758,39 +733,23 @@ body.present #intro{display:none}
 <svg aria-label="Mindvalley" width="110" height="48" viewBox="0 0 54.463 24" style="position:absolute;right:128px;bottom:64px;width:110px;height:48px"><path fill="#ffffff" d="M 0 0 C 1.871 0.154 3.735 0.394 5.591 0.663 C 8.266 1.051 10.929 1.536 13.554 2.182 C 16.039 2.793 18.657 3.45 20.912 4.699 C 24.841 6.877 25.634 11.429 25.634 15.575 L 25.634 24 C 7.732 14.836 0 0 0 0 Z"/><path fill="#ffffff" d="M 54.463 0 C 52.592 0.154 50.728 0.394 48.872 0.663 C 46.197 1.051 43.535 1.536 40.909 2.182 C 38.424 2.793 35.806 3.45 33.551 4.699 C 29.622 6.877 28.829 11.429 28.829 15.575 L 28.829 24 C 46.73 14.836 54.463 0 54.463 0 Z"/></svg>
 <aside>Close on the line. Thank Sabrina and the cohort. Q&A.</aside>
 </section>
-</main>
-<div id="notes"></div>
-<div id="bar"><div style="display:flex;gap:8px"><button id="mode">Present</button><button id="nt">Notes</button></div><span id="ct"></span><div style="display:flex;gap:8px"><button id="pv">&larr;</button><button id="nx">&rarr;</button></div></div>
-<script>
-(function(){
-var deck=document.getElementById('deck'),S=[].slice.call(deck.children),i=0,b=document.body;
-S.forEach(function(s,k){var w=document.createElement('div');w.className='wrap';deck.insertBefore(w,s);w.appendChild(s);var a=s.querySelector('aside');var n=document.createElement('p');n.className='n';n.textContent=(k+1)+' / '+S.length+(a?' · Notes: '+a.textContent.trim():'');w.after(n);});
-var W=[].slice.call(deck.querySelectorAll('.wrap'));
-function fit(){
- if(b.classList.contains('present')){var sc=Math.min(innerWidth/1920,innerHeight/1080),x=(innerWidth-1920*sc)/2,y=(innerHeight-1080*sc)/2;
-  W.forEach(function(w){w.style.cssText='position:static'});
-  S.forEach(function(s){s.style.transform='translate('+x+'px,'+y+'px) scale('+sc+')'});}
- else{var cw=Math.min(innerWidth-32,1280),sc=cw/1920;
-  W.forEach(function(w){w.style.cssText='width:'+cw+'px;height:'+(1080*sc)+'px'});
-  S.forEach(function(s){s.style.transform='scale('+sc+')'});
-  [].forEach.call(deck.querySelectorAll('.n'),function(n){n.style.width=cw+'px'});}
-}
-function show(k){i=Math.max(0,Math.min(S.length-1,k));S.forEach(function(s,j){s.classList.toggle('on',j===i)});document.getElementById('ct').textContent=(i+1)+' / '+S.length;var a=S[i].querySelector('aside');document.getElementById('notes').textContent=a?a.textContent.trim():'No notes';try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
-function present(on){b.classList.toggle('present',on);b.classList.toggle('all',!on);document.getElementById('mode').textContent=on?'All slides':'Present';fit();show(i);if(!on)W[i].scrollIntoView();}
-document.getElementById('mode').onclick=function(){present(!b.classList.contains('present'))};
-document.getElementById('nt').onclick=function(){b.classList.toggle('shownotes')};
-document.getElementById('pv').onclick=function(){if(!b.classList.contains('present'))present(true);show(i-1)};
-document.getElementById('nx').onclick=function(){if(!b.classList.contains('present'))present(true);show(i+1)};
-W.forEach(function(w,k){w.addEventListener('click',function(e){if(b.classList.contains('present')||e.target.closest('a'))return;i=k;present(true)})});
-deck.addEventListener('click',function(e){if(!b.classList.contains('present')||e.target.closest('a'))return;show(e.clientX<innerWidth/3?i-1:i+1)});
-addEventListener('keydown',function(e){var p=b.classList.contains('present');
- if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){if(p){e.preventDefault();show(i+1)}}
- else if(e.key==='ArrowLeft'||e.key==='PageUp'){if(p){e.preventDefault();show(i-1)}}
- else if(e.key==='n'||e.key==='N')b.classList.toggle('shownotes');
- else if(e.key==='Escape'&&p)present(false);
- else if(e.key==='f'||e.key==='F'){if(!p)present(true);if(document.documentElement.requestFullscreen)document.documentElement.requestFullscreen()}});
-addEventListener('resize',fit);
-var h=parseInt(location.hash.slice(1));if(h>0){i=h-1;present(true)}else{fit();show(0)}
-})();
-</script>
-</body></html>
+    </main>
+    <script>
+    (function(){
+    var S=[].slice.call(document.querySelectorAll('#deck>section')),i=0;
+    function fit(){var sc=Math.min(innerWidth/1920,innerHeight/1080),x=(innerWidth-1920*sc)/2,y=(innerHeight-1080*sc)/2;
+     S.forEach(function(s){s.style.transform='translate('+x+'px,'+y+'px) scale('+sc+')'});}
+    function show(k){i=Math.max(0,Math.min(S.length-1,k));S.forEach(function(s,j){s.classList.toggle('on',j===i)});try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+    document.addEventListener('click',function(e){if(e.target.closest('a'))return;show(e.clientX<innerWidth/2?i-1:i+1)});
+    addEventListener('keydown',function(e){
+     if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].indexOf(e.key)>-1){e.preventDefault();show(i+1)}
+     else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>-1){e.preventDefault();show(i-1)}
+     else if(e.key==='Home')show(0); else if(e.key==='End')show(S.length-1);
+     else if(e.key==='f'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();});
+    var tx=null;addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+    addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>40){show(d<0?i+1:i-1);e.preventDefault()}});
+    addEventListener('resize',fit);fit();
+    var h=parseInt(location.hash.slice(1));show(h>0?h-1:0);
+    })();
+    </script>
+    </body></html>
