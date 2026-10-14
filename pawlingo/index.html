@@ -1,0 +1,569 @@
+<!doctype html>
+    <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pawlingo · Facebook Ads worked example</title>
+    <meta name="description" content="Pawlingo: a worked example of the Facebook Ads Live Build, from brand kit to finished Reels.">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap">
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:'Google Sans','DM Sans',Arial,sans-serif;-webkit-tap-highlight-color:transparent;user-select:none}
+    #deck{position:fixed;inset:0}
+    #deck>section{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;transform-origin:0 0;visibility:hidden;color:#fff}
+    #deck>section.on{visibility:visible}
+    #deck>section aside{display:none}
+    #deck>section img,#deck>section video{display:block;object-fit:cover} #deck svg[aria-label='Play video'],#deck div[style*='rgba(29,27,46,0.55)']{pointer-events:none;transition:opacity .3s} #deck section.snd svg[aria-label='Play video'],#deck section.snd div[style*='rgba(29,27,46,0.55)']{opacity:0}
+#deck img[data-pos='50% 40%']{object-position:50% 40%} #deck img[data-pos='50% 100%']{object-position:50% 100%}
+    </style></head>
+    <body>
+    <main id="deck">
+    <section id="cover" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:0">
+<img src="assets/d325f80a2b4edbd8c1dcc07fcf781094.jpg" alt="A yellow Labrador lit like a film-noir mob boss, eyes narrowed" style="position:absolute;left:1000px;top:0;width:920px;height:1080px;object-fit:cover">
+<p style="position:absolute;left:128px;top:150px;width:800px;font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">Worked example · Facebook Ads Live Build</p>
+<h1 style="position:absolute;left:128px;top:210px;width:860px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:190px;font-weight:800;line-height:1;letter-spacing:-4px;color:#f6b73c">pawlingo</h1>
+<h2 style="position:absolute;left:128px;top:440px;width:820px;font-size:52px;font-weight:700;line-height:1.15;color:#fffaf2">Learn dog. Five minutes a day.</h2>
+<p style="position:absolute;left:128px;top:600px;width:780px;font-size:32px;line-height:1.4;color:#c9c6da">Your dog has heard every secret you have ever said out loud. This deck answers every question from the live build for an app that finally lets it talk back.</p>
+<p style="position:absolute;left:128px;top:900px;width:800px;font-size:24px;color:#a9a6bd">A fictional brand for demonstration. Images, video and voice made with Higgsfield. Demo figures are labelled.</p>
+<aside>Use this as the second document. After each teaching slide in the main deck, flip here to show the answer for Pawlingo, then let the room do their own. Every image, the logo and the hero Reel were generated in Higgsfield during the build.</aside>
+</section>
+<section id="howto" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">How to use this deck</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px;color:#fffaf2">Every ask in the live build, answered for one cheeky brand.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:40px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">The ask</p><p style="font-size:34px;font-weight:700;line-height:1.25">The question the slide asked the room</p><p style="font-size:26px;line-height:1.4;color:#c9c6da">Shown small, at the top of every slide.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:40px;border-top:8px solid #f6b73c"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f6b73c">Our answer</p><p style="font-size:34px;font-weight:700;line-height:1.25">What Pawlingo wrote</p><p style="font-size:26px;line-height:1.4;color:#c9c6da">Big, specific and as cheeky as a Labrador near a sausage roll.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:40px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Your turn</p><p style="font-size:34px;font-weight:700;line-height:1.25">Swap the dog for your business</p><p style="font-size:26px;line-height:1.4;color:#c9c6da">Same prompt, same skill, your brand.</p></div>
+</div>
+<p style="font-size:34px;line-height:1.4;color:#c9c6da">If it works for <span style="color:#f6b73c"><b>an app that translates dogs</b></span>, it works for you.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">02 · Pawlingo is a fictional brand for demonstration</p>
+<aside>Set the rules of the game: the main deck asks, this deck answers. Worth pointing out that this is an app, so the offer is a free tier and a trial, the conversion event is a trial start, and the tracking is app events.</aside>
+</section>
+<section id="p1" data-transition="fade" style="background:#3b5bff;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#dce3ff">Part 01 · Brand kit</p>
+<h1 style="width:1600px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:150px;font-weight:800;line-height:1;letter-spacing:-3px">Sit. Stay. Brand.</h1>
+<p style="width:1400px;font-size:40px;line-height:1.3;color:#eef1ff">Before a single ad: who are Pawlingo, what do they stand for, what do they look like, and how do they sound?</p>
+<aside>Pairs with Part 01 of the main deck. Answers produced with the facebook-ads-brand-kit skill, then the logo in Higgsfield.</aside>
+</section>
+<section id="kit" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:104px 128px 140px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: eight questions before you write a single ad</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">The Pawlingo brand kit, on one page.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Purpose</p><p style="font-size:26px;line-height:1.3">Your dog has listened to every word you’ve said. Your turn to listen back.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Values</p><p style="font-size:26px;line-height:1.3">The dog’s side, always. Five minutes, not fifty. Funny, but true.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Position</p><p style="font-size:26px;line-height:1.3">The language app where the dog is the teacher and you’re the one in training.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Audience</p><p style="font-size:26px;line-height:1.3">Tom, 36. Tells Nugget the Labrador things he hasn’t told his wife.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Tone of voice</p><p style="font-size:26px;line-height:1.3">A golden retriever who has read your diary. Cheeky, loyal, never crude.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Visual identity</p><p style="font-size:26px;line-height:1.3">Squeaky-toy blue, biscuit yellow. A raised eyebrow on every mascot.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Proof</p><p style="font-size:26px;line-height:1.3">Lessons built on dog body-language research. [Real behaviourist name here.]</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Offer</p><p style="font-size:26px;line-height:1.3">Free daily lessons. Pawlingo Plus £4.99 a month, 7-day free trial.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">04 · Pawlingo is a fictional brand · prices illustrative</p>
+<aside>The whole kit at a glance. The next ten slides take each answer one at a time. Note the Proof box: an app that 'translates' dogs needs a credible spine, so the lessons are grounded in real body-language research and Live Translate is sold as entertainment. That honesty matters later on the policy slide.</aside>
+</section>
+<section id="logos" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:96px 128px 140px;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: a logo you could draw from memory · ten routes from Higgsfield</p>
+<h2 style="font-size:56px;font-weight:700;line-height:1.1;letter-spacing:-1px">Five breeds, two forms each: full mascot and app icon.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:16px 24px">
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/cc061b683059b23924af9bcc651d5c2e.jpg" alt="Pawlingo logo: yellow Labrador puppy mascot over a blue lowercase wordmark" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">1 · Labrador</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/7417fc473d3ad5c546ebeefe851a72c5.jpg" alt="Pawlingo app icon: yellow Labrador head on blue with a paw-print speech bubble" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px;border:4px solid #3b5bff"><p style="font-size:24px;font-weight:700;color:#3b5bff">2 · Labrador icon · our pick</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/b83410fc8df23fde5ec637d1e70a3fe8.jpg" alt="Pawlingo logo: unimpressed Dalmatian mascot over a black wordmark" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">3 · Dalmatian</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/ea98ecbb49c99fe933a21f8f8f4bef22.jpg" alt="Pawlingo app icon: Dalmatian head on red with a typing speech bubble" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">4 · Dalmatian icon</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/94cfcd3bdba4c5e3b344af217c6cbc66.jpg" alt="Pawlingo logo: outraged Chihuahua mascot over a pink wordmark" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">5 · Chihuahua</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/3fda384f2c8ffff78fc9fa0967409918.jpg" alt="Pawlingo app icon: barking Chihuahua on pink with a lightning speech bubble" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">6 · Chihuahua icon</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/7e2fc053be285da7f5469788243ccc2d.jpg" alt="Pawlingo logo: Alsatian professor in round glasses over a navy wordmark" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">7 · Alsatian</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/c8c7546f5865e4d7f1887c750a6083f6.jpg" alt="Pawlingo app icon: Alsatian in glasses on amber with a question-mark bubble" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">8 · Alsatian icon</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/a10e10bbcacf226861239544411458f0.jpg" alt="Pawlingo logo: Golden Retriever with a tennis ball over a purple wordmark" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">9 · Golden Retriever</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><img src="assets/257641c5cfa90700fb6a8566278b7633.jpg" alt="Pawlingo app icon: Golden Retriever on purple with a woof speech bubble" style="width:280px;height:280px;object-fit:contain;background:#ffffff;border-radius:16px"><p style="font-size:24px;font-weight:700">10 · Golden icon</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#6b6880">05 · Generated with GPT Image 2.5 in Higgsfield · original mascots · run a trademark search before real use</p>
+<aside>Ten routes from one prompt template, changing only breed, colour and form. Our pick is 2: the Labrador is the nation's favourite family dog, the speech bubble says 'translation' without words, and it reads at app-icon size. The Alsatian professor (7) becomes the teacher character in the lesson videos. The mascots are original drawings, but the name sits close to other app names, so a trademark check comes before any real launch.</aside>
+</section>
+<section id="purpose" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: what changes in the world because you exist?</p>
+<h2 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1.05;color:#f6b73c">Your dog has listened to every word you’ve said. It’s your turn to listen back.</h2>
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#a9a6bd">The drafts we buried in the garden</p>
+<div style="display:flex;gap:20px">
+<p style="flex:1;font-size:28px;line-height:1.35;color:#c9c6da;background:#2a2840;border-radius:16px;padding:24px"><span style="color:#fffaf2"><b>Rejected:</b></span> “Strengthening the human-pet bond.” Every vet, insurer and treat brand already says it.</p>
+<p style="flex:1;font-size:28px;line-height:1.35;color:#c9c6da;background:#2a2840;border-radius:16px;padding:24px"><span style="color:#fffaf2"><b>Rejected:</b></span> “AI-powered dog translation.” A feature, not a reason. And not quite true.</p>
+<p style="flex:1;font-size:28px;line-height:1.35;color:#fffaf2;background:#2a2840;border-radius:16px;padding:24px;border:2px solid #f6b73c">The winner: flips who’s been failing whom. The dog was never the bad listener.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">06 · Pawlingo is a fictional brand for demonstration</p>
+<aside>The brand kit skill asked: why did you start this (because our Labrador sighs at us like a disappointed teacher), what would customers lose if we vanished (the feeling of finally being understood back), what annoys you about the category (training apps that treat the dog as the problem). The winner works because it's the insight in one line: the dog already listens to everything (the secrets, the rants, the mother-in-law), so the brand's job is to make the relationship two-way.</aside>
+</section>
+<section id="values" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: three things you’d lose a sale to protect</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Values that cost us something.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:40px"><p style="font-size:40px;font-weight:700;line-height:1.15">The dog’s side, always</p><p style="font-size:28px;line-height:1.4;color:#4a4760">We teach you to understand him, not to correct him. No shock collars in the shop, no “dominance” tips.</p><p style="font-size:24px;font-weight:700;color:#3b5bff">Cost: we turn down every training-gadget sponsor.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:40px"><p style="font-size:40px;font-weight:700;line-height:1.15">Five minutes, not fifty</p><p style="font-size:28px;line-height:1.4;color:#4a4760">Lessons stop at five minutes. Then we tell you to go and play with your actual dog.</p><p style="font-size:24px;font-weight:700;color:#3b5bff">Cost: less screen time than any app wants.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:40px"><p style="font-size:40px;font-weight:700;line-height:1.15">Funny, but true</p><p style="font-size:28px;line-height:1.4;color:#4a4760">Every joke sits on real dog behaviour. Live Translate is for laughs, and we say so.</p><p style="font-size:24px;font-weight:700;color:#3b5bff">Cost: we can’t claim “100% accurate”.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">07 · Pawlingo is a fictional brand for demonstration</p>
+<aside>Each value passes the three tests: it costs money, a competitor wouldn't say it, a customer can see it. 'Funny, but true' is the one that protects us on Facebook later: it stops us writing claims we can't prove, which is exactly where translation apps get into trouble.</aside>
+</section>
+<section id="position" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: fill in the blanks, then try to steal it</p>
+<div style="display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:56px">
+<p style="font-size:44px;font-weight:500;line-height:1.5">For <span style="color:#f6b73c">dog owners</span> who <span style="color:#f6b73c">talk to their dog every day and only understand half of what comes back</span>, Pawlingo is the <span style="color:#f6b73c">language app</span> that <span style="color:#f6b73c">teaches you to speak dog</span>, unlike <span style="color:#f6b73c">training apps that only teach the dog to obey you</span>, because <span style="color:#f6b73c">the dog is the teacher and you’re the one in training</span>.</p>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;border-left:6px solid #3b5bff;padding:8px 0 8px 28px"><p style="font-size:30px;font-weight:700">The steal test: pass</p><p style="font-size:28px;line-height:1.35;color:#c9c6da">A training app can’t say “you’re the one in training” without undoing its whole product.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;border-left:6px solid #3b5bff;padding:8px 0 8px 28px"><p style="font-size:30px;font-weight:700">The enemy test: pass</p><p style="font-size:28px;line-height:1.35;color:#c9c6da">Our enemy is the one-way relationship: owner talks, owner guesses, dog sighs.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">08 · Pawlingo is a fictional brand for demonstration</p>
+<aside>Read it out. The reversal is the whole brand: every other dog app makes the dog the student. The enemy is a habit, not a competitor, so it stays funny and safe.</aside>
+</section>
+<section id="sophistication" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: how tired is your market of hearing it?</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Every dog app says “train your dog in 7 days”. We’re at stage 3.</h2>
+<div style="display:flex;gap:16px">
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:44px;font-weight:700;color:#a3a0b5">1</p><p style="font-size:26px;line-height:1.3">First claim</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:44px;font-weight:700;color:#a3a0b5">2</p><p style="font-size:26px;line-height:1.3">Bigger claim</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#3b5bff;color:#fffaf2;border-radius:20px;padding:26px"><p style="font-size:44px;font-weight:700">3</p><p style="font-size:26px;line-height:1.3">New mechanism</p><p style="font-size:24px;font-weight:700">Our lead: the dog teaches you</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:44px;font-weight:700;color:#a3a0b5">4</p><p style="font-size:26px;line-height:1.3">Better mechanism</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px;background:#f6b73c;border-radius:20px;padding:26px"><p style="font-size:44px;font-weight:700">5</p><p style="font-size:26px;line-height:1.3">Identity</p><p style="font-size:24px;font-weight:700">Our twist: he knows all your secrets</p></div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#4a4760">From the Meta Ad Library (demo): dog apps all promise obedience, fewer accidents, a calmer dog. Nobody sells the relationship. So we lead with the reversed mechanism and season it with the secret-keeper.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">09 · Eugene Schwartz, Breakthrough Advertising · Ad Library finding is illustrative</p>
+<aside>Mechanism: five-minute lessons where the dog's behaviour is the curriculum (ears, tail, sighs, the side-eye). Identity: the owner who talks to the dog like a best friend. The secret-keeper twist is what made the hero Reel.</aside>
+</section>
+<section id="audience" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: one person, described like a friend</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Meet Tom, 36. Nugget knows more about him than his wife does.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1.3;display:flex;flex-direction:column;gap:16px;background:#2a2840;border-radius:24px;padding:36px">
+<p style="font-size:28px;line-height:1.4"><b>A normal Tuesday:</b> works from home, walks Nugget at lunch, narrates his whole day to a Labrador.</p>
+<p style="font-size:28px;line-height:1.4"><b>Has tried:</b> YouTube at 1am on “why does my dog stare at me”. Three training apps, deleted by day four.</p>
+<p style="font-size:28px;line-height:1.4;color:#f6b73c"><b>His words:</b> “I tell him everything. I just wish I knew what he thought about it.”</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#2a2840;border-radius:24px;padding:36px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Pain, Urgent, Pay</p>
+<p style="font-size:28px;line-height:1.35"><b>Pain:</b> yes. Guilt and guessing.</p>
+<p style="font-size:28px;line-height:1.35"><b>Urgent:</b> weakest. Spikes with a new puppy.</p>
+<p style="font-size:28px;line-height:1.35"><b>Pay:</b> yes. £4.99 is less than a bag of treats.</p>
+<p style="font-size:26px;line-height:1.35;color:#c9c6da">So: lead with the free tier, and time spend for Christmas puppies and January.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">10 · Tom and Nugget are invented · Pawlingo is fictional</p>
+<aside>Tom is specific enough to picture. The weakest of Pain, Urgent, Pay is urgency again, so the plan changes: free tier to get in the door, and the calendar is built around new-puppy moments.</aside>
+</section>
+<section id="voice" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:104px 128px 140px;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: set the four tone dials on purpose</p>
+<h2 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.05">A golden retriever who has read your diary.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:28px">
+<p style="font-size:26px;line-height:1.5">Funny <b style="color:#3b5bff">●</b>○○○○ Serious</p>
+<p style="font-size:26px;line-height:1.5">Casual <b style="color:#3b5bff">●</b>○○○○ Formal</p>
+<p style="font-size:26px;line-height:1.5">Irreverent ○<b style="color:#3b5bff">●</b>○○○ Respectful</p>
+<p style="font-size:26px;line-height:1.5">Enthusiastic <b style="color:#3b5bff">●</b>○○○○ Matter-of-fact</p>
+<p style="font-size:26px;line-height:1.4;color:#4a4760">Cheeky, never crude. Loyal, never needy. Nosy, never nasty.</p>
+</div>
+<div style="flex:1.2;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Dog innuendo bank (one per ad, max)</p>
+<p style="font-size:26px;line-height:1.4">“Heavy petting. Light learning.” · “Fluent in tongue.” · “He’s been sniffing around your secrets.” · “Who’s a good listener?” · “Off the lead and on the record.” · “Ruff day? He knows.” · “Got a bone to pick with you.”</p>
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Before / after</p>
+<p style="font-size:26px;line-height:1.4;color:#4a4760">“Our app helps you understand your dog’s behaviour.”</p>
+<p style="font-size:26px;line-height:1.4"><b>“He’s not ‘just being a dog’. He’s been leaving you voice notes for years.”</b></p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">11 · Tone dimensions after Nielsen Norman Group · Pawlingo is a fictional brand</p>
+<aside>The voice is seaside-postcard innuendo: deniable, never explicit, and always on the human, never the dog. One per ad is the rule, and it must never hide the reason to download. Explicit sexual innuendo gets ads restricted on Meta, which is why the bank stays at 'heavy petting' and never goes further.</aside>
+</section>
+<section id="visual" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:row;gap:56px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: colours, type, photo style, logo rules</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Real dogs, real homes, one blue phone.</h2>
+<div style="display:flex;gap:14px">
+<div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:90px;background:#3b5bff;border-radius:14px"></div><p style="font-size:24px">Squeaky blue #3B5BFF</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:90px;background:#f6b73c;border-radius:14px"></div><p style="font-size:24px">Biscuit #F6B73C</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:90px;background:#fff6e8;border-radius:14px"></div><p style="font-size:24px">Cream #FFF6E8</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px"><div style="height:90px;background:#2a2840;border:2px solid #4a4766;border-radius:14px"></div><p style="font-size:24px">Ink #1D1B2E</p></div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#c9c6da"><b style="color:#fffaf2">pawlingo</b> in Baloo 2, all lower case. Body in Google Sans. Photos: one dog, one human, warm evening light, the phone glowing blue. The translation always appears as a blue card.</p>
+<p style="font-size:28px;line-height:1.4;color:#c9c6da"><b style="color:#fffaf2">Never:</b> a dog that looks scared or told off, a cartoon dog in live action, or text that implies the translation is literal.</p>
+</div>
+<img src="assets/b1efbb988ebc41fceb0d2c98d23da32e.jpg" alt="The Pawlingo app on a phone on a coffee table, a Labrador behind it" style="width:500px;height:800px;object-fit:cover;border-radius:28px">
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">12 · Image generated with Higgsfield · Pawlingo is a fictional brand</p>
+<aside>The blue translation card is the brand's signature device: it appears in every ad, the app and the Reel, so people recognise a Pawlingo ad before they read it. These hex codes and the photo rules went into every Higgsfield prompt.</aside>
+</section>
+<section id="offer" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: proof and offer · what they get, what it costs, why now</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Free to sniff. Plus to stay.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Free</p><p style="font-size:36px;font-weight:700">Daily 5-minute lesson</p><p style="font-size:28px;line-height:1.4;color:#c9c6da">Tails, ears, sighs and side-eye. One breed pack included.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px;border-top:8px solid #f6b73c"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f6b73c">Pawlingo Plus · £4.99 a month</p><p style="font-size:36px;font-weight:700">Live Translate + every breed</p><p style="font-size:28px;line-height:1.4;color:#c9c6da">Labrador, Dalmatian, Chihuahua, Alsatian, Golden Retriever dialects. 7-day free trial.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">The Good Boy Guarantee</p><p style="font-size:36px;font-weight:700">Cancel in two taps</p><p style="font-size:28px;line-height:1.4;color:#c9c6da">No guilt-trip screens. No sad-puppy pop-up. Promise.</p></div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#c9c6da"><b style="color:#fffaf2">Why now:</b> the January puppy rush. Launch price £29.99 a year until 31 January. <b style="color:#fffaf2">Proof we still need:</b> “[REAL REVIEW HERE]” and a named behaviourist. Never invent either.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">13 · Value equation after Alex Hormozi · Prices and dates are illustrative</p>
+<aside>Dream outcome: understanding your dog. Likelihood: lessons built on real behaviour research. Time: five minutes a day. Effort: an app you already carry. The guarantee pokes fun at subscription apps that guilt-trip you on cancel, which is on-brand and builds trust.</aside>
+</section>
+<section id="pitch" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: transformation statement and social pitch</p>
+<div style="display:flex;flex-direction:column;gap:8px;background:#3b5bff;color:#fffaf2;border-radius:24px;padding:36px 44px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#dce3ff">From… to…</p>
+<p style="font-size:40px;font-weight:700;line-height:1.3">From “I wish I knew what he was thinking” to “I know exactly what he thinks, and he’s judging me”.</p>
+</div>
+<div style="display:grid;grid-template-columns:200px 1fr;gap:14px 28px">
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Name</p><p style="font-size:30px;line-height:1.3">We’re Pawlingo.</p>
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Same</p><p style="font-size:30px;line-height:1.3">We make a language-learning app.</p>
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Fame</p><p style="font-size:30px;line-height:1.3">The only one where the teacher is your dog. [Real number of lessons completed here.]</p>
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Pain</p><p style="font-size:30px;line-height:1.3">Most owners talk to their dog every day and guess what comes back.</p>
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Aim</p><p style="font-size:30px;line-height:1.3">Right now we’re launching the Labrador pack.</p>
+<p style="font-size:28px;font-weight:700;color:#3b5bff">Game</p><p style="font-size:30px;line-height:1.3">We believe every dog deserves to be understood. And every secret deserves to be kept.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">14 · Social Pitch after Daniel Priestley · Pawlingo is a fictional brand</p>
+<aside>About 20 seconds out loud. 'Same' is deliberately boring: a language-learning app. That's what makes 'the teacher is your dog' land. The Game line seeds the secrets insight that drives the ads.</aside>
+</section>
+<section id="p2" data-transition="fade" style="background:#3b5bff;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#dce3ff">Part 02 · Insight</p>
+<h1 style="width:1640px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:130px;font-weight:800;line-height:1;letter-spacing:-3px">Data says owners talk to their dogs. Insight says they confess.</h1>
+<p style="width:1400px;font-size:40px;line-height:1.3;color:#eef1ff">The dog is the only one who has heard everything, and it has never said a word.</p>
+<aside>Pairs with Part 02 of the main deck. Answers produced with the facebook-ads-insight skill.</aside>
+</section>
+<section id="datavs" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: data, insight, execution</p>
+<h2 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:84px;font-weight:800;line-height:1.05;color:#f6b73c">Owners don’t just talk to their dogs. They tell them everything.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Data</p><p style="font-size:28px;line-height:1.4">Top comments under dog videos: “he knows things about me nobody else does”, “I rant to her after every work call”, “if he could talk I’d be in prison”. (Illustrative)</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px;border-top:8px solid #f6b73c"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f6b73c">Insight</p><p style="font-size:28px;line-height:1.4">The dog is the one confidant who never judges and never tells. Because it can’t. Yet.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Execution</p><p style="font-size:28px;line-height:1.4">Give the dog a voice, and let it use everything it has heard. Comedy from leverage.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">16 · Comment examples are illustrative · Pawlingo is a fictional brand</p>
+<aside>Data anyone could see, the human truth inside it, then an execution that makes you feel it. The comments under dog content are free research. The insight gives us the whole creative platform: a dog that finally talks, and has been taking notes.</aside>
+</section>
+<section id="needs" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: which human needs do you really serve?</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">It’s not about the dog’s vocabulary. It’s about being understood back.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Life-Force 8 · no. 7</p><p style="font-size:36px;font-weight:700">Care for loved ones</p><p style="font-size:28px;line-height:1.4;color:#4a4760">Is he happy? Bored? Ill? Tension: he can’t tell you.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Life-Force 8 · no. 8</p><p style="font-size:36px;font-weight:700">Social approval</p><p style="font-size:28px;line-height:1.4;color:#4a4760">The clip everyone shares. Tension: your dog’s best moments happen when nobody’s filming.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:36px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Learned want</p><p style="font-size:36px;font-weight:700">Curiosity</p><p style="font-size:28px;line-height:1.4;color:#4a4760">“What is he thinking?” Paired with care: “understand him in five minutes a day”.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">17 · Life-Force 8: Drew Eric Whitman, Cashvertising · Pawlingo is a fictional brand</p>
+<aside>Curiosity alone is a weak want. Attached to care for a loved one it sells. Social approval explains why the funny translation videos spread: owners share them to say 'this is exactly him'.</aside>
+</section>
+<section id="tensions" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: three insights with tension in them</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1">I want… but… because… So our ad should…</h2>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:28px;align-items:center;background:#2a2840;border-radius:20px;padding:26px 32px"><p style="font-size:56px;font-weight:800;color:#f6b73c">1</p><p style="flex:1;font-size:28px;line-height:1.35">“I want to know what he’s thinking, but I’m scared of the answer, because I’ve told him everything.”</p><p style="flex:0.8;font-size:28px;line-height:1.35;color:#f6b73c">So our ad should let the dog use it.</p></div>
+<div style="display:flex;gap:28px;align-items:center;background:#2a2840;border-radius:20px;padding:26px 32px"><p style="font-size:56px;font-weight:800;color:#f6b73c">2</p><p style="flex:1;font-size:28px;line-height:1.35">“I want to understand his behaviour, but training apps make me feel like a bad owner, because they’re all about correcting him.”</p><p style="flex:0.8;font-size:28px;line-height:1.35;color:#f6b73c">So our ad should make the human the student.</p></div>
+<div style="display:flex;gap:28px;align-items:center;background:#2a2840;border-radius:20px;padding:26px 32px"><p style="font-size:56px;font-weight:800;color:#f6b73c">3</p><p style="flex:1;font-size:28px;line-height:1.35">“I want to learn, but I quit every app by day four, because they nag.”</p><p style="flex:0.8;font-size:28px;line-height:1.35;color:#f6b73c">So our ad should let the dog do the nagging. He already does.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">18 · Pawlingo is a fictional brand for demonstration</p>
+<aside>Three insights, three angles for Part 3. Insight 1 is the funniest and became the hero Reel. Insight 3 answers the hidden objection for any app: 'I won't stick at it.' A dog staring at you at 7am until you do your lesson is the most believable reminder in the world.</aside>
+</section>
+<section id="beliefs" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:110px 128px 150px;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: what 10 beliefs must they hold to buy from you?</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Every missing belief is a headline.</h2>
+<table style="font-size:26px;color:#1d1b2e">
+<tr><th style="width:38%">Belief Tom needs</th><th style="width:14%">Holds it?</th><th style="width:48%">Headline that installs it</th></tr>
+<tr><td>My dog is trying to tell me things</td><td>Yes</td><td>(Already true. Use it.)</td></tr>
+<tr><td>Dog behaviour can actually be learned</td><td>No</td><td>“Ears, tail, sigh. Three words of Labrador before your coffee’s cold.”</td></tr>
+<tr><td>Five minutes a day is enough</td><td>No</td><td>“Shorter than his morning sniff.”</td></tr>
+<tr><td>It’s not just a gimmick</td><td>Unsure</td><td>“Live Translate is for laughs. The lessons are for real.”</td></tr>
+<tr><td>I won’t quit by day four</td><td>No</td><td>“Miss a lesson and he’ll stare at you. You know the stare.”</td></tr>
+<tr><td>Cancelling won’t be a nightmare</td><td>Unsure</td><td>“Cancel in two taps. No sad-puppy pop-up.”</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">19 · 10 beliefs prompt after Daniel Priestley · showing 6 of 10 · Pawlingo is fictional</p>
+<aside>Prompt: 'What are the 10 beliefs someone would have to hold to enthusiastically buy from us?' Then score each against Tom. Every 'No' becomes a headline. The gimmick belief is the most important for a novelty app: if they think it's a toy, they'll download, laugh and delete.</aside>
+</section>
+<section id="p3" data-transition="fade" style="background:#3b5bff;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#dce3ff">Part 03 · Facebook statics</p>
+<h1 style="width:1600px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:150px;font-weight:800;line-height:1;letter-spacing:-3px">Fetch the thumb.</h1>
+<p style="width:1400px;font-size:40px;line-height:1.3;color:#eef1ff">Three angles, one frame each, made with Claude and Higgsfield. Then a test to find the winner.</p>
+<aside>Pairs with Part 03 of the main deck. Answers produced with the facebook-ads-static skill and the Pawlingo skill.</aside>
+</section>
+<section id="setup" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: set Facebook up to find your people</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Let the dog find the dog people.</h2>
+<table style="font-size:28px;color:#fffaf2">
+<tr><th style="width:26%">Setting</th><th style="width:74%">Pawlingo choice</th></tr>
+<tr><td>Objective</td><td>App promotion, optimised for trial starts</td></tr>
+<tr><td>Audience</td><td>Broad: UK, 22 to 55. No interest targeting. The Labrador does the targeting.</td></tr>
+<tr><td>Placements</td><td>Advantage+ (feed, Stories, Reels)</td></tr>
+<tr><td>Creative</td><td>Three genuinely different angles, not three button colours</td></tr>
+<tr><td>Tracking</td><td>Meta SDK in the app: install, trial start, subscribe</td></tr>
+<tr><td>Budget</td><td>£30 a day for round one [illustrative]</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">21 · Check Meta’s current guidance · Pawlingo is a fictional brand</p>
+<aside>The app difference: optimise for trial starts, not installs. Installs are cheap and full of people who laugh and delete. Trial starts tell Facebook to find people who pay.</aside>
+</section>
+<section id="hooks" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:104px 128px 140px;display:flex;flex-direction:column;gap:22px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: 20 hooks before you judge one</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-1px">Twelve of our twenty. The top three are gold.</h2>
+<div style="display:flex;gap:16px">
+<p style="flex:1;font-size:30px;font-weight:700;line-height:1.3;background:#3b5bff;color:#fffaf2;border-radius:18px;padding:24px">1 · He’s heard all your secrets. Now he can talk.</p>
+<p style="flex:1;font-size:30px;font-weight:700;line-height:1.3;background:#3b5bff;color:#fffaf2;border-radius:18px;padding:24px">2 · You’ve been training the wrong one.</p>
+<p style="flex:1;font-size:30px;font-weight:700;line-height:1.3;background:#3b5bff;color:#fffaf2;border-radius:18px;padding:24px">3 · He’s fluent in human. Time you learned dog.</p>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">That sigh? It was about you.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Five minutes a day. Shorter than his morning sniff.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Your dog has a bone to pick with you.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Heavy petting. Light learning.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">What he really means when he brings you one sock.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Fluent in tongue. Now fluent in bark.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Who’s a good listener? Not you.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Your Labrador has opinions about your ex.</p>
+<p style="font-size:26px;line-height:1.3;background:#fffdf8;border:1px solid #eadfca;border-radius:14px;padding:18px">Ruff day? He knows. He always knows.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">22 · Ranked on evidence, not taste · Pawlingo is a fictional brand</p>
+<aside>Written fast, judged later. The top three each come from a different insight: 1 is the secret-keeper, 2 is the reversal (human as student), 3 is the effort answer. Those three become the three angles on the next slide.</aside>
+</section>
+<section id="ads" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:72px 128px 110px;display:flex;flex-direction:column;gap:22px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: three statics, three angles · same layout, same CTA</p>
+<div style="display:flex;gap:36px;justify-content:center">
+<div style="width:480px;display:flex;flex-direction:column;background:#ffffff;border:1px solid #e4dccd;border-radius:16px;overflow:hidden">
+<div style="display:flex;gap:12px;align-items:center;padding:14px 18px"><img src="assets/7417fc473d3ad5c546ebeefe851a72c5.jpg" alt="" style="width:44px;height:44px;object-fit:cover;border-radius:12px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;font-weight:700">Pawlingo</p><p style="font-size:24px;color:#65676b">Sponsored</p></div></div>
+<p style="font-size:24px;line-height:1.3;padding:0 18px 12px">Every rant. Every secret. He heard it all.</p>
+<div style="position:relative;width:480px;height:520px">
+<img src="assets/d325f80a2b4edbd8c1dcc07fcf781094.jpg" alt="Labrador lit like a mob boss, eyes narrowed" style="width:480px;height:520px;object-fit:cover">
+<p style="position:absolute;left:26px;top:22px;width:428px;font-size:44px;font-weight:700;line-height:1.1;color:#ffffff;text-shadow:0px 3px 12px rgba(0,0,0,0.7)">He’s heard all your secrets.</p>
+<p style="position:absolute;left:26px;top:372px;width:428px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:62px;font-weight:800;line-height:1;color:#f6b73c;text-shadow:0px 3px 14px rgba(0,0,0,0.85)">Now he can talk.</p>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;background:#f0f2f5;padding:14px 18px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;color:#65676b">PAWLINGO.APP</p><p style="font-size:24px;font-weight:700">Learn dog. 5 mins a day.</p></div><p style="font-size:24px;font-weight:700;background:#e4e6eb;border-radius:8px;padding:10px 16px">Install</p></div>
+</div>
+<div style="width:480px;display:flex;flex-direction:column;background:#ffffff;border:1px solid #e4dccd;border-radius:16px;overflow:hidden">
+<div style="display:flex;gap:12px;align-items:center;padding:14px 18px"><img src="assets/7417fc473d3ad5c546ebeefe851a72c5.jpg" alt="" style="width:44px;height:44px;object-fit:cover;border-radius:12px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;font-weight:700">Pawlingo</p><p style="font-size:24px;color:#65676b">Sponsored</p></div></div>
+<p style="font-size:24px;line-height:1.3;padding:0 18px 12px">Six weeks of “sit”. Zero listening.</p>
+<div style="position:relative;width:480px;height:520px">
+<img src="assets/ae0c2eec06dae305beaa14f2c8338891.jpg" alt="Man pointing chopsticks at his Labrador in mock refusal" style="width:480px;height:520px;object-fit:cover">
+<p style="position:absolute;left:26px;top:22px;width:428px;font-size:44px;font-weight:700;line-height:1.1;color:#ffffff;text-shadow:0px 3px 12px rgba(0,0,0,0.7)">You’ve been training</p>
+<p style="position:absolute;left:26px;top:362px;width:428px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:66px;font-weight:800;line-height:1;color:#f6b73c;text-shadow:0px 3px 14px rgba(0,0,0,0.9), 0px 0px 30px rgba(0,0,0,0.6)">the wrong one.</p>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;background:#f0f2f5;padding:14px 18px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;color:#65676b">PAWLINGO.APP</p><p style="font-size:24px;font-weight:700">Learn dog. 5 mins a day.</p></div><p style="font-size:24px;font-weight:700;background:#e4e6eb;border-radius:8px;padding:10px 16px">Install</p></div>
+</div>
+<div style="width:480px;display:flex;flex-direction:column;background:#ffffff;border:1px solid #e4dccd;border-radius:16px;overflow:hidden">
+<div style="display:flex;gap:12px;align-items:center;padding:14px 18px"><img src="assets/7417fc473d3ad5c546ebeefe851a72c5.jpg" alt="" style="width:44px;height:44px;object-fit:cover;border-radius:12px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;font-weight:700">Pawlingo</p><p style="font-size:24px;color:#65676b">Sponsored</p></div></div>
+<p style="font-size:24px;line-height:1.3;padding:0 18px 12px">Ears, tail, sigh. Time you learned dog.</p>
+<div style="position:relative;width:480px;height:520px">
+<img src="assets/b1efbb988ebc41fceb0d2c98d23da32e.jpg" alt="The Pawlingo app on a phone, a Labrador behind it" style="width:480px;height:520px;object-fit:cover">
+<p style="position:absolute;left:26px;top:22px;width:428px;font-size:44px;font-weight:700;line-height:1.1;color:#ffffff;text-shadow:0px 3px 12px rgba(0,0,0,0.7)">He’s fluent</p>
+<p style="position:absolute;left:26px;top:76px;width:428px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:66px;font-weight:800;line-height:1;color:#f6b73c;text-shadow:0px 3px 12px rgba(0,0,0,0.7)">in human.</p>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;background:#f0f2f5;padding:14px 18px"><div style="display:flex;flex-direction:column"><p style="font-size:24px;color:#65676b">PAWLINGO.APP</p><p style="font-size:24px;font-weight:700">Learn dog. 5 mins a day.</p></div><p style="font-size:24px;font-weight:700;background:#e4e6eb;border-radius:8px;padding:10px 16px">Install</p></div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:44px;width:1600px;font-size:24px;color:#6b6880">23 · Angle 1 secret-keeper · Angle 2 reversal · Angle 3 effort · Images from Higgsfield · Fictional brand</p>
+<aside>Three genuinely different angles, one variable each: what they say. Same layout, same CTA, same dog. Angle 1 wins round one on the test slide.</aside>
+</section>
+<section id="policy" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: would Facebook reject this?</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Joke about the situation. Never about the viewer.</h2>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:20px"><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#ff9aa8"><b>Rejected:</b></span> “Lonely? Your dog’s the only one who listens.”</p><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#9ee6b8"><b>Approved:</b></span> “Your dog listens to everything. Now you can listen back.”</p></div>
+<div style="display:flex;gap:20px"><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#ff9aa8"><b>Rejected:</b></span> “Real dog translation. 100% accurate.”</p><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#9ee6b8"><b>Approved:</b></span> “Live Translate is for laughs. The lessons are for real.”</p></div>
+<div style="display:flex;gap:20px"><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#ff9aa8"><b>Rejected:</b></span> anything that goes past “heavy petting”.</p><p style="flex:1;font-size:28px;line-height:1.35;background:#2a2840;border-radius:16px;padding:22px"><span style="color:#9ee6b8"><b>Approved:</b></span> “Heavy petting. Light learning.” Deniable, and about the dog.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">24 · Meta personal attributes and adult content rules · UK consumer law on claims · check current policy</p>
+<aside>Three traps for this brand. Loneliness is a personal attribute, so implying the viewer is lonely gets rejected. 'Accurate translation' is an unprovable claim: that's a consumer-law and trust problem, not just a policy one. And the innuendo has a ceiling: seaside postcard yes, anything explicit gets the ad restricted.</aside>
+</section>
+<section id="carousel" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:110px 128px 150px;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: a carousel that earns the swipe, shaped with HSTSS</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Six cards. One very well-informed Labrador.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#3b5bff;color:#fffaf2;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#dce3ff">1 · Hook</p><p style="font-size:30px;font-weight:700;line-height:1.25">Your dog has a secret.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">2 · Stakes</p><p style="font-size:30px;line-height:1.25">It’s yours. All of them.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">3 · Turn</p><p style="font-size:30px;line-height:1.25">He’s been trying to tell you something for years.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">4 · Scene</p><p style="font-size:30px;line-height:1.25">Ears back + slow blink = “I love you, but you’re wrong.”</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">5 · Shatter + offer</p><p style="font-size:30px;line-height:1.25">Five-minute lessons, free. Plus from £4.99.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#f6b73c;border-radius:20px;padding:26px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase">6 · Repeat the hook</p><p style="font-size:30px;font-weight:700;line-height:1.25">Learn what he’s been saying.</p></div>
+</div>
+<p style="font-size:28px;line-height:1.35;color:#4a4760">Primary text: “He’s heard everything. Swipe to hear his side.” Card headlines under 40 characters.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">25 · HSTSS: Hook, Stakes, Turn, Scene, Shatter (Vishen Lakhiani) · Fictional brand</p>
+<aside>Card 1 works alone for people who never swipe. Card 4 is the product demo disguised as a joke: one real lesson, ears and blink, which is what makes the app feel useful rather than a gimmick.</aside>
+</section>
+<section id="narratives" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: one angle, three narratives</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">Angle 2, “you’ve been training the wrong one”, told three ways.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:34px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Problem, Agitate, Solve</p><p style="font-size:28px;line-height:1.4">Six weeks of “sit”. He sits when he feels like it. Turns out he’s been asking for something the whole time. Pawlingo: learn what.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:34px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Before, After, Bridge</p><p style="font-size:28px;line-height:1.4">Before: shouting “leave it” at a confused dog. After: you spot the ears and he never grabs it. Bridge: five-minute lessons on what he’s saying.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:34px;border-top:8px solid #f6b73c"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f6b73c">Pope in the Pool</p><p style="font-size:28px;line-height:1.4">The boring bit (how to read a tail wag) taught by Professor Alsatian in round glasses, who keeps getting distracted by a squirrel mid-lesson.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">26 · Pope in the Pool: Blake Snyder, Save the Cat · Pawlingo is a fictional brand</p>
+<aside>PAS agitates the situation, never the viewer. Pope in the Pool is the educational video every app needs and nobody watches, made watchable by the mascot from logo option 7.</aside>
+</section>
+<section id="email" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: lead ad form and the follow-up email</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Catch the owner. Then write like the dog.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:34px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Lead form: 3 questions</p><p style="font-size:28px;line-height:1.4">Name · Email (pre-filled) · What’s your dog’s name?</p><p style="font-size:28px;line-height:1.4;color:#4a4760">Thank-you screen: “Nugget’s first lesson is in your inbox. He’s already judging your accent.”</p></div>
+<div style="flex:1.2;display:flex;flex-direction:column;gap:10px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:34px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Five subject lines</p>
+<p style="font-size:27px;line-height:1.35"><b>Curiosity:</b> Nugget has been trying to tell you something</p>
+<p style="font-size:27px;line-height:1.35"><b>Benefit:</b> Three words of Labrador before breakfast</p>
+<p style="font-size:27px;line-height:1.35"><b>Question:</b> What does the head tilt actually mean?</p>
+<p style="font-size:27px;line-height:1.35"><b>Number:</b> 5 minutes. That’s the whole lesson.</p>
+<p style="font-size:27px;line-height:1.35"><b>Personal:</b> Tom, Nugget has a bone to pick with you</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">27 · Fictional brand · the dog’s name doubles as personalisation for every email after</p>
+<aside>The third question is fun and useful: the dog's name goes into every subject line, so the emails read as if they come from the dog. Never ask anything you won't use, and never ask for anything sensitive.</aside>
+</section>
+<section id="test" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:120px 128px 150px;display:flex;flex-direction:column;gap:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: read the results and back the winning horse</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.1;letter-spacing:-1px">Round 1 result: the secret-keeper wins.</h2>
+<table style="font-size:28px;color:#fffaf2">
+<tr><th style="width:40%">Ad (angle)</th><th style="width:15%">CPM</th><th style="width:15%">CTR</th><th style="width:18%">Cost per trial</th><th style="width:12%">Tier</th></tr>
+<tr><td>1 · He’s heard all your secrets</td><td>£6.40</td><td>2.7%</td><td>£3.10</td><td>Gold</td></tr>
+<tr><td>3 · He’s fluent in human</td><td>£6.90</td><td>1.8%</td><td>£4.60</td><td>Silver</td></tr>
+<tr><td>2 · Training the wrong one</td><td>£7.20</td><td>2.2%</td><td>£6.80</td><td>Bronze</td></tr>
+</table>
+<div style="display:flex;gap:24px">
+<div style="flex:1;background:#2a2840;border-radius:20px;padding:28px"><p style="font-size:28px;line-height:1.4"><b style="color:#f6b73c">The finding:</b> Gold makes owners laugh at themselves. Bronze gets clicks from people who want obedience tips, then bounces off a language app.</p></div>
+<div style="flex:1;background:#2a2840;border-radius:20px;padding:28px"><p style="font-size:28px;line-height:1.4"><b style="color:#f6b73c">Next round:</b> lock the secrets angle. Test three visuals, then turn it into the Reel.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">28 · DEMO DATA, invented to show the method · Gold, silver, bronze adapted from Hook Point</p>
+<aside>Make it clear these numbers are invented. The lesson is the reading: judge on cost per trial, not clicks. Ad 2 has a decent CTR but the wrong people click it.</aside>
+</section>
+<section id="p4" data-transition="fade" style="background:#3b5bff;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:48px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#dce3ff">Part 04 · Video</p>
+<h1 style="width:1600px;font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:150px;font-weight:800;line-height:1;letter-spacing:-3px">Let the dog talk.</h1>
+<p style="width:1400px;font-size:40px;line-height:1.3;color:#eef1ff">Ten scripts on the secrets insight. One rendered end to end in Higgsfield. You pick the next one.</p>
+<aside>Pairs with Part 04 of the main deck. Scripts written with the facebook-ads-video skill and the Pawlingo skill. The format is the same every time: the dog barks, the phone translates, the human is in trouble.</aside>
+</section>
+<section id="scripts1" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:96px 128px 140px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: ten scripts before you shoot one · 1 to 5</p>
+<h2 style="font-size:56px;font-weight:700;line-height:1.1;letter-spacing:-1px">The dog barks. The phone translates. The human is in trouble.</h2>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px;background:#3b5bff;color:#fffaf2;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">1 · The Chow Mein Blackmail <span style="color:#f6b73c">(rendered)</span></p><p style="flex:1;font-size:26px;line-height:1.35">“Your chow mein smells better than my dinner.” “No.” Low woof: “Give me the chow mein. Or I tell your mother-in-law what you said about her on Tuesday.” He hands it over. “Pleasure doing business with you.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">2 · The Witness <span style="color:#3b5bff">(rendered)</span></p><p style="flex:1;font-size:26px;line-height:1.35">A couple argue over who ate the last biscuit. Both turn to the Dalmatian. Woof: “It was him. Also, he’s been using your posh shampoo. On me.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">3 · The Therapist</p><p style="flex:1;font-size:26px;line-height:1.35">Owner lies on the sofa pouring her heart out to her Golden Retriever. A gentle woof: “That’ll be sixty pounds. I take sausages.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">4 · The Walk Review</p><p style="flex:1;font-size:26px;line-height:1.35">Home from a walk, the Labrador barks once. “Two stars. You were on your phone the whole time. The lamppost was the highlight.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">5 · The First Date</p><p style="flex:1;font-size:26px;line-height:1.35">She brings a date home. The Chihuahua yaps. “He’s the third one this month. The last one cried at Bake Off.” The date quietly finds his coat.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">30 · Every script ends: “Pawlingo. Learn dog. Five minutes a day.” · Fictional brand</p>
+<aside>All ten use the same mechanic, so any of them can be swapped into the same edit template. Pick on two things: how fast the joke lands (under 3 seconds of set-up) and how clearly the app is the hero (the translation card on the phone).</aside>
+</section>
+<section id="scripts2" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:96px 128px 140px;display:flex;flex-direction:column;gap:20px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: ten scripts before you shoot one · 6 to 10</p>
+<h2 style="font-size:56px;font-weight:700;line-height:1.1;letter-spacing:-1px">Pick the one that makes the room snort.</h2>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">6 · The Vet Lie</p><p style="flex:1;font-size:26px;line-height:1.35">“We’re going to the park!” The car pulls into the vet’s. From the back seat, a slow woof: “I trusted you. I’ve told the postman everything.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">7 · 3am</p><p style="flex:1;font-size:26px;line-height:1.35">A bark at 3am. Owner stumbles out, terrified. Phone: “Nothing. I just wanted to see if you’d come.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">8 · The Lesson</p><p style="flex:1;font-size:26px;line-height:1.35">Owner practises today’s lesson, a woof, out loud. Professor Alsatian listens, then barks. “Your accent is appalling. Again.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">9 · The Park Group Chat</p><p style="flex:1;font-size:26px;line-height:1.35">Five dogs at the park, all translated at once. “Mine sings in the shower.” “Mine talks to the fridge.” “Mine cries at adverts.” Beat. “Including this one.”</p></div>
+<div style="display:flex;gap:24px;background:#fffdf8;border:1px solid #eadfca;border-radius:18px;padding:20px 26px"><p style="width:330px;font-size:28px;font-weight:700;line-height:1.25">10 · The Interview</p><p style="flex:1;font-size:26px;line-height:1.35">A new dog sitter arrives. The Golden Retriever interviews her through the app. “What’s your position on cheese? Take your time.”</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">31 · Every script ends: “Pawlingo. Learn dog. Five minutes a day.” · Fictional brand</p>
+<aside>Our ranking if you want one: 1 (proven, rendered), 9 (best for sharing: the 'including this one' twist breaks the fourth wall), 7 (cheapest to shoot: one dog, one corridor, one phone). Script 8 is the only one that shows the actual product, so it's the best retargeting ad for people who've already laughed at the others.</aside>
+</section>
+<section id="script" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:104px 128px 140px;display:flex;flex-direction:column;gap:22px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: a Reels ad, shaped with HSTSS · script 1, The Chow Mein Blackmail</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-1px">33 seconds. Six shots. One very good boy.</h2>
+<table style="font-size:26px;color:#fffaf2">
+<tr><th style="width:14%">Time</th><th style="width:16%">Beat</th><th style="width:40%">Picture</th><th style="width:30%">Sound</th></tr>
+<tr><td>0–5s</td><td>Hook</td><td>Tom eats chow mein. Nugget stares. Two barks.</td><td>Woof. Woof.</td></tr>
+<tr><td>5–10s</td><td>Stakes</td><td>Phone lights up, translation card pops.</td><td>“Your chow mein smells better than my dinner.”</td></tr>
+<tr><td>10–15s</td><td>Turn</td><td>Tom points his chopsticks.</td><td>“No. You’ve got your own dinner.”</td></tr>
+<tr><td>15–23s</td><td>Scene</td><td>Mob-boss close-up. One low woof.</td><td>“Or I tell your mother-in-law what you said…”</td></tr>
+<tr><td>23–29s</td><td>Shatter</td><td>Tom hands over the carton in shame.</td><td>“Pleasure doing business with you.”</td></tr>
+<tr><td>29–33s</td><td>CTA</td><td>Pawlingo end card.</td><td>Learn dog. Five minutes a day.</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">32 · Frames: GPT Image 2.5 · Video: Kling 3.0 · Dog’s voice: Naomi (US) · All in Higgsfield · captions on</p>
+<aside>The dog's translated voice is a calm American woman, which is funnier than a growl: the menace is in the politeness. Captions carry everything because most people watch with sound off. Cut a 6-second version from shots 4 and 5 for hook testing.</aside>
+</section>
+<section id="shots" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:110px 128px 150px;display:flex;flex-direction:column;gap:24px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: AI shot prompts and five hooks to test</p>
+<h2 style="font-size:60px;font-weight:700;line-height:1.1;letter-spacing:-1px">The prompts we fed Higgsfield, and the next test.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1.3;display:flex;flex-direction:column;gap:14px">
+<div style="background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:24px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Shot 1 · frame</p><p style="font-size:26px;line-height:1.35">British man, mid-thirties, grey hoodie, on a sofa in a warm living room at night, eating beef chow mein. A yellow Labrador sits beside him staring at the food. iPhone glowing blue on the coffee table.</p></div>
+<div style="background:#fffdf8;border:1px solid #eadfca;border-radius:20px;padding:24px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Shot 4 · motion</p><p style="font-size:26px;line-height:1.35">Very slow menacing push-in on the Labrador. Eyes narrow, head tilts, one low quiet woof. Low cello note. Same dog, same lamp as shot 1.</p></div>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#3b5bff;color:#fffaf2;border-radius:20px;padding:28px">
+<p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#dce3ff">Hook test: one variable</p>
+<p style="font-size:26px;line-height:1.35"><b>Question:</b> What is your dog really saying?</p>
+<p style="font-size:26px;line-height:1.35"><b>Bold claim:</b> My dog is blackmailing me.</p>
+<p style="font-size:26px;line-height:1.35"><b>Visual surprise:</b> Open on the mob-boss close-up.</p>
+<p style="font-size:26px;line-height:1.35"><b>Problem:</b> Never tell your dog your secrets.</p>
+<p style="font-size:26px;line-height:1.35"><b>Curiosity gap:</b> I gave my dog a translator. Big mistake.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">33 · Judge hooks on hook rate: 3-second plays ÷ impressions · Pawlingo is fictional</p>
+<aside>The consistency trick: generate the first frame, then feed it back as the reference for every other frame so the dog, the man and the room stay the same. Keep the body of the ad identical and swap only the first three seconds to test hooks.</aside>
+</section>
+<section id="reel" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:90px 128px 110px;display:flex;flex-direction:row;gap:80px;align-items:center">
+<video src="assets/97fb92d62340527cdee9a62512845dac.mp4" poster="assets/530e56a91885b35d01f3e4e6d3780fa2.jpg" aria-label="The Chow Mein Blackmail: a Labrador blackmails its owner through the Pawlingo app" style="width:480px;height:853px;object-fit:cover;border-radius:28px" autoplay muted loop playsinline title="Tap for sound"></video>
+<div style="position:absolute;left:293px;top:454px;width:150px;height:150px;border-radius:75px;background:rgba(29,27,46,0.55);border:4px solid #fffaf2"></div>
+<svg aria-label="Play video" style="position:absolute;left:336px;top:494px;width:70px;height:70px" viewBox="0 0 70 70" width="70" height="70"><path d="M20 8 L64 35 L20 62 Z" fill="#fffaf2"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The finished ad · 33 seconds · 9:16</p>
+<h2 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1;color:#f6b73c">The Chow Mein Blackmail</h2>
+<p style="font-size:32px;line-height:1.35">The insight, played straight: he has heard everything you’ve ever said, and now he can use it.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Hook</b></span>  Two barks at a man eating chow mein.</p>
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Twist</b></span>  “Or I tell your mother-in-law what you said about her on Tuesday.”</p>
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Payoff</b></span>  “Pleasure doing business with you.” Learn dog. Five minutes a day.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:44px;width:1600px;font-size:24px;color:#a9a6bd">34 · Frames: GPT Image 2.5 · Video: Kling 3.0 · Voice: Naomi · All in Higgsfield · Fictional brand</p>
+<aside>Play it. The owner's line was generated by Kling with the video; the dog's translated voice is a calm American woman, run through a phone-speaker EQ so it sounds like it's coming from the app. The deck plays silent; the live HTML version plays with sound on tap.</aside>
+</section>
+<section id="witness" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:90px 128px 110px;display:flex;flex-direction:row;gap:80px;align-items:center">
+<video src="assets/f1df5b19c24c24781616f45f62dbb590.mp4" poster="assets/2f2ab457a6d486df3f79badacef32874.jpg" aria-label="The Witness: a Dalmatian settles a biscuit argument through the Pawlingo app" style="width:480px;height:853px;object-fit:cover;border-radius:28px" autoplay muted loop playsinline title="Tap for sound"></video>
+<div style="position:absolute;left:293px;top:454px;width:150px;height:150px;border-radius:75px;background:rgba(29,27,46,0.55);border:4px solid #fffaf2"></div>
+<svg aria-label="Play video" style="position:absolute;left:336px;top:494px;width:70px;height:70px" viewBox="0 0 70 70" width="70" height="70"><path d="M20 8 L64 35 L20 62 Z" fill="#fffaf2"/></svg>
+<div style="flex:1;display:flex;flex-direction:column;gap:26px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The second ad · script 2 · 29 seconds · 9:16</p>
+<h2 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1;color:#f6b73c">The Witness</h2>
+<p style="font-size:32px;line-height:1.35">Same insight, new dog: the one in the room who saw everything is finally called to give evidence.</p>
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Hook</b></span>  “Who ate the last biscuit?” “Not me!”</p>
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Verdict</b></span>  One bark from the Dalmatian. “It was him.”</p>
+<p style="font-size:28px;line-height:1.35;color:#c9c6da"><span style="color:#f6b73c"><b>Payoff</b></span>  “Also, he’s been using your posh shampoo. On me.” Cut to a shampoo-advert Dalmatian.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:44px;width:1600px;font-size:24px;color:#a9a6bd">35 · Frames: GPT Image 2.5 · Video: Kling 3.0 · Voice: Naomi · All in Higgsfield · Fictional brand</p>
+<aside>Test this against the Chow Mein Blackmail with everything else the same: same voice, same translation card, same end card. Only the story changes, so whichever wins tells you which kind of secret your audience finds funnier: the one about family, or the one about the couple.</aside>
+</section>
+<section id="skill" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#9db0ff">The ask: turn your brand kit into a skill</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">We built a Pawlingo skill. Now every ad sounds like the dog.</h2>
+<div style="display:flex;gap:24px">
+<div style="flex:1.2;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px"><p style="font-size:30px;font-weight:700;color:#f6b73c">pawlingo-copywriter</p><p style="font-size:28px;line-height:1.4;color:#c9c6da">Brand kit, tone dials, innuendo bank (one per ad), the translation-card format, offer and guarantee, the three insights, the winning angle, and the policy check on claims and innuendo.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#2a2840;border-radius:24px;padding:36px;border-top:8px solid #f6b73c"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#9db0ff">Ask it</p><p style="font-size:28px;line-height:1.4">“Write five hooks for Christmas morning.”</p><p style="font-size:28px;line-height:1.4;color:#f6b73c">“He saw you re-wrap your mum’s present from last year. He’s saying nothing. For now.”</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#a9a6bd">36 · Your version: run the brand kit skill, then ask Claude to save the result as a skill</p>
+<aside>The magic moment: ask for something we never discussed (Christmas) and it comes back in voice, on the secrets insight, inside policy.</aside>
+</section>
+<section id="workflow" data-transition="fade" style="background:#fff6e8;color:#1d1b2e;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<p style="font-size:24px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3b5bff">The ask: what do you hand to AI? (skill × enjoyment)</p>
+<h2 style="font-size:72px;font-weight:700;line-height:1.1;letter-spacing:-1px">We kept the jokes. The AI fetched the rest.</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#3b5bff;color:#fffaf2;border-radius:24px;padding:32px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#dce3ff">Do it ourselves</p><p style="font-size:30px;line-height:1.35">The insight, the punchline, picking the winner.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:32px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Collaborate with AI</p><p style="font-size:30px;line-height:1.35">Hooks, the ten scripts, carousel copy, emails.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:32px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Learn with AI</p><p style="font-size:30px;line-height:1.35">App events and the Meta SDK. Reading cost per trial.</p></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#fffdf8;border:1px solid #eadfca;border-radius:24px;padding:32px"><p style="font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#3b5bff">Automate</p><p style="font-size:30px;line-height:1.35">Ten logo options, frames, video, voice, captions, the edit.</p></div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6b6880">37 · Skill × enjoyment after Domenic Ashburn · Pawlingo is a fictional brand</p>
+<aside>Time check for the room: brand, ten logos, ten scripts and a finished Reel with voice in one session with Claude and Higgsfield. The parts we kept human are the parts that made it funny.</aside>
+</section>
+<section id="close" data-transition="fade" style="background:#1d1b2e;color:#fffaf2;font-family:'Google Sans', 'DM Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:center;gap:40px">
+<h1 style="font-family:'Baloo 2', 'Google Sans', Arial, sans-serif;font-size:140px;font-weight:800;line-height:1;letter-spacing:-3px;color:#f6b73c">Your turn.</h1>
+<p style="width:1500px;font-size:48px;font-weight:700;line-height:1.25">Swap the dog for your business. Same eight questions, same insights, same horse race.</p>
+<p style="width:1500px;font-size:34px;line-height:1.4;color:#c9c6da">Your customer has been telling you what they want for years. Learn the language.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1600px;font-size:24px;color:#a9a6bd">Prompts and skills: garethwinter-cpu.github.io/facebook-ads-live-build</p>
+<aside>Close the demo and hand over to the live build on their own brands. The last line is the bridge: the Pawlingo insight applies to every business.</aside>
+</section>
+    </main>
+    <script>
+    (function(){
+    var S=[].slice.call(document.querySelectorAll('#deck>section')),i=0;
+    function fit(){var sc=Math.min(innerWidth/1920,innerHeight/1080),x=(innerWidth-1920*sc)/2,y=(innerHeight-1080*sc)/2;
+     S.forEach(function(s){s.style.transform='translate('+x+'px,'+y+'px) scale('+sc+')'});}
+    function show(k){i=Math.max(0,Math.min(S.length-1,k));document.querySelectorAll('#deck video').forEach(function(v){v.muted=true});S.forEach(function(s){s.classList.remove('snd')});var cv=S[i]&&S[i].querySelector('video');if(cv){cv.currentTime=0;cv.play()}S.forEach(function(s,j){s.classList.toggle('on',j===i)});try{history.replaceState(null,'','#'+(i+1))}catch(e){}}
+    document.addEventListener('click',function(e){if(e.target.closest('a'))return;var v=e.target.closest('video');if(v){v.muted=!v.muted;v.closest('section').classList.toggle('snd',!v.muted);if(!v.muted){v.currentTime=0}v.play();return}show(e.clientX<innerWidth/2?i-1:i+1)});
+    addEventListener('keydown',function(e){
+     if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].indexOf(e.key)>-1){e.preventDefault();show(i+1)}
+     else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].indexOf(e.key)>-1){e.preventDefault();show(i-1)}
+     else if(e.key==='Home')show(0); else if(e.key==='End')show(S.length-1);
+     else if(e.key==='f'&&document.documentElement.requestFullscreen)document.documentElement.requestFullscreen();});
+    var tx=null;addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+    addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>40){show(d<0?i+1:i-1);e.preventDefault()}});
+    addEventListener('resize',fit);fit();
+    var h=parseInt(location.hash.slice(1));show(h>0?h-1:0);
+    })();
+    </script>
+    </body></html>
